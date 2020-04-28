@@ -218,10 +218,10 @@
     - [If](#if)
     - [IsDefined](#isdefined)
     - [IsInteger](#isinteger)
-  - [20. 优化指令 Optimization](#20-%e4%bc%98%e5%8c%96%e6%8c%87%e4%bb%a4-optimization)
+  - [19. 优化指令 Optimization](#19-%e4%bc%98%e5%8c%96%e6%8c%87%e4%bb%a4-optimization)
     - [最大值点  Maximize](#%e6%9c%80%e5%a4%a7%e5%80%bc%e7%82%b9-maximize)
     - [最小值点  Minimize](#%e6%9c%80%e5%b0%8f%e5%80%bc%e7%82%b9-minimize)
-  - [三维指令 3D](#%e4%b8%89%e7%bb%b4%e6%8c%87%e4%bb%a4-3d)
+  - [20. 三维指令 3D](#20-%e4%b8%89%e7%bb%b4%e6%8c%87%e4%bb%a4-3d)
     - [上底 Top](#%e4%b8%8a%e5%ba%95-top)
     - [下底 Bottom](#%e4%b8%8b%e5%ba%95-bottom)
     - [侧面 QuadricSide](#%e4%be%a7%e9%9d%a2-quadricside)
@@ -1536,7 +1536,7 @@ Object`。
 `IsInteger[Number]`：根据对象是否为整数，返回真假值。
 
 
-## 20. 优化指令 Optimization
+## 19. 优化指令 Optimization
 
 ### 最大值点  Maximize
 最大值点[<因变量（派生的数值对象） >,<自变量（自由的数值对象） >]：  
@@ -1546,7 +1546,7 @@ Object`。
 最小值点[<因变量（派生的数值对象） >,<自变量（自由的数值对象） >]：  
 计算自变量（自由的数值对象）使其给出因变量（派生的数值对象）的最小值。
 
-## 三维指令 3D
+## 20. 三维指令 3D
 
 ### 上底 Top
 上底( <二次曲面> )
