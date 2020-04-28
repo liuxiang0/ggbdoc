@@ -1,8 +1,8 @@
 - [GeoGebra 命令表速查](#geogebra-%e5%91%bd%e4%bb%a4%e8%a1%a8%e9%80%9f%e6%9f%a5)
   - [1. 一般命令](#1-%e4%b8%80%e8%88%ac%e5%91%bd%e4%bb%a4)
-    - [绘图步骤](#%e7%bb%98%e5%9b%be%e6%ad%a5%e9%aa%a4)
-    - [删除](#%e5%88%a0%e9%99%a4)
-    - [关系](#%e5%85%b3%e7%b3%bb)
+    - [绘图步骤 ConstructionStep](#%e7%bb%98%e5%9b%be%e6%ad%a5%e9%aa%a4-constructionstep)
+    - [删除 Delete](#%e5%88%a0%e9%99%a4-delete)
+    - [关系 Relation](#%e5%85%b3%e7%b3%bb-relation)
   - [2. 代数（Algebra）或数值](#2-%e4%bb%a3%e6%95%b0algebra%e6%88%96%e6%95%b0%e5%80%bc)
     - [叉积 Cross](#%e5%8f%89%e7%a7%af-cross)
     - [点积 Dot](#%e7%82%b9%e7%a7%af-dot)
@@ -249,6 +249,8 @@
 
 #  GeoGebra 命令表速查
 
+Version 5.0.579
+
 使用命令可以生成新对象或者修改已有对象。
 
 当在 GeoGebra 的命令框中输入命令， 软件会尝试着自动补齐命令， 也就是说， 在命令
@@ -258,16 +260,27 @@
 
 如果提示的命令并不是想输入的， 可以继续输入， GeoGebra 会再提示其他相近的命令。
 
+以下命令速查表基于：  
+- GeoGebra Classic 5.0.579.0-d
+- 唐家军 《GeoGebra指令汇编-唐家军.pdf》
+
+说明：由于版本不同，中文翻译有很多不一样，以5.0.579的中文翻译为准。
+
+|版本     |日期        |参与人员 |
+|----     |----       |----     |
+|V 5.0.579| 2020-04-28|         |
+|         |           |         |
+
 ## 1. 一般命令
 
-### 绘图步骤 
+### 绘图步骤 ConstructionStep
 `ConstructionStep[]`：返回目前的步骤数  
 `ConstructionStep[Object]`：返回指定对象目前的步骤数
 
-### 删除 
+### 删除 Delete
 `Delete[Object]`：删除某一对象以及所有与之相关的对象
 
-### 关系 
+### 关系 Relation
 `Relation[Object a, Object b]`： 显示一个窗口让我们得知 Object a 和 Object b 之间的关系。  
 如：该命令可以知道是否一点在一条直线上（或一条圆锥曲线上）、一直线是与一圆锥曲线相切、一直线是否与一圆锥曲线相交或两对象是否相等。
 
@@ -1290,13 +1303,13 @@ text 的方向和排列。
 式及变量 i 从 a 到 b 变化。如： `L = Sequence[(i, 1), i, 1, 5]`得到的点序列， x 坐标变化从 1 到
 5，如下图所示。  
 
-![sequence point](images\sequence-point.png)
+![sequence point](images/sequence-point.png)
 
 `Sequence[Expression, Variable i, Number a, Number b, Number s]`： 生成一个序列， 使用给
 定的表达式及变量 i 从 a 到 b 变化，其中步长为 s。如： `L = Sequence[(i, 1), i, 1, 5, 0.5]` 得到
 的点序列， x 坐标变化从 1 到 5，步长为 0.5。如下图所示。
 
-![sequence point2](images\sequence-point2.png)
+![sequence point2](images/sequence-point2.png)
 
 
 ## 15. 几何变换 Transformation
@@ -1432,7 +1445,7 @@ deviation)其中 Φ(x)是符合 N(0,1) 分布的概率密度函数。
 `BarChart[Start value, End value, List of heights]`：建立指定区间内的条形图，条形个数取
 决于表格长度，高度取决于元素大小。如： `BarChart[10, 20, {1,2,3,4,5}]`得到如下图所示。  
 
-![Bar-1条形图](images\bar1.png)
+![Bar-1条形图](images/bar1.png)
 
 `BarChart[Start value a, End value b, Expression, Variable k, From number c, To number d]`：
 建立 $[a,b]$ 之间的条形图，用含变量 k 的表达式表示条形高度，其中 k 从 c 到 d 变化。  
@@ -1441,14 +1454,14 @@ deviation)其中 Φ(x)是符合 N(0,1) 分布的概率密度函数。
 `BarChart[List of data , List of frequencies, Width of bars w]`： 建立位置长度的条形图， 并指
 定条宽。如： `BarChart[{10,11,12,13,14}, {1,2,3,0,3}, 0.5]` 得到如下图所示。
 
-![Bar-2条形图](images\bar2.png)
+![Bar-2条形图](images/bar2.png)
 
 ### 直方图 Histogram
 `Histogram[List of class boundaries, List of heights]`：由给定的高度建立直方图。  
 `Histogram[List of class boundaries, List of raw data]`：使用给定的数据建立直方图。如：
 `Histogram[{1, 2, 3, 4},{1.0, 1.1, 1.1, 1.2, 1.7, 2.2, 2.5, 4.0}]`得到如下图所示。
 
-![Histogram直方图](images\Histogram.png)
+![Histogram直方图](images/Histogram.png)
 
 ### 盒形图 BoxPlot
 `BoxPlot[yOffset, yScale, List of raw data]`： 建立给定数据的盒状图， 并在坐标系的垂直方
