@@ -1,5 +1,5 @@
 - [GeoGebra 应用案例](#geogebra-%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b)
-  - [分段函数](#%e5%88%86%e6%ae%b5%e5%87%bd%e6%95%b0)
+  - [分段函数 Piecewise Function](#%e5%88%86%e6%ae%b5%e5%87%bd%e6%95%b0-piecewise-function)
   - [圆到椭圆方法](#%e5%9c%86%e5%88%b0%e6%a4%ad%e5%9c%86%e6%96%b9%e6%b3%95)
     - [伸缩变换：Stretch(圆，向量)](#%e4%bc%b8%e7%bc%a9%e5%8f%98%e6%8d%a2stretch%e5%9c%86%e5%90%91%e9%87%8f)
   - [牛顿迭代法 Newton's Iteration](#%e7%89%9b%e9%a1%bf%e8%bf%ad%e4%bb%a3%e6%b3%95-newtons-iteration)
@@ -7,11 +7,21 @@
     - [GeoGebra中演示步骤](#geogebra%e4%b8%ad%e6%bc%94%e7%a4%ba%e6%ad%a5%e9%aa%a4)
     - [Cubic iteration 三次迭代](#cubic-iteration-%e4%b8%89%e6%ac%a1%e8%bf%ad%e4%bb%a3)
     - [举例 - 黄金分割比率 Golden Ratio](#%e4%b8%be%e4%be%8b---%e9%bb%84%e9%87%91%e5%88%86%e5%89%b2%e6%af%94%e7%8e%87-golden-ratio)
+  - [点阵和向量阵](#%e7%82%b9%e9%98%b5%e5%92%8c%e5%90%91%e9%87%8f%e9%98%b5)
+    - [通项公式](#%e9%80%9a%e9%a1%b9%e5%85%ac%e5%bc%8f)
+      - [等比数列 {a,ar,ar^2,ar^3,...}](#%e7%ad%89%e6%af%94%e6%95%b0%e5%88%97-aarar2ar3)
+      - [给点序列生成标签序列](#%e7%bb%99%e7%82%b9%e5%ba%8f%e5%88%97%e7%94%9f%e6%88%90%e6%a0%87%e7%ad%be%e5%ba%8f%e5%88%97)
+      - [生成奇数点列 (i, 2i-1)](#%e7%94%9f%e6%88%90%e5%a5%87%e6%95%b0%e7%82%b9%e5%88%97-i-2i-1)
+      - [生成向量列表](#%e7%94%9f%e6%88%90%e5%90%91%e9%87%8f%e5%88%97%e8%a1%a8)
+  - [迭代](#%e8%bf%ad%e4%bb%a3)
+    - [阶乘的迭代实现](#%e9%98%b6%e4%b9%98%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%ae%9e%e7%8e%b0)
+    - [Fibonacci数列的迭代生成](#fibonacci%e6%95%b0%e5%88%97%e7%9a%84%e8%bf%ad%e4%bb%a3%e7%94%9f%e6%88%90)
+
 
 # GeoGebra 应用案例
 
 
-## 分段函数
+## 分段函数 Piecewise Function
 
 绘制分段函数图像：
 
@@ -108,3 +118,51 @@ $$x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}\Big(1+\frac{f(x_n) \cdot f''(x_n)}{2f'(x_n
 
 取 $f(x)=1-\frac{4}{5} x^2$, 求 $f(x)=0$ 的根.
 
+## 点阵和向量阵
+
+### 通项公式
+
+点阵中点的坐标可用含点序号的关系式直接表示出来，如同数列的通项公式，已知点的序号，就可求得该点的坐标。  
+通项法从实现上来看，似乎很简单，实际上制作点阵的所有方法中，通项法是最难的，是需要很深的数学功底。
+
+通用指令有两种情况：
+- Sequence(含有变量 i 的通项,i,1,n)
+- Flatten(Sequence(Sequence(含有i和j的通项,i,i最小值,i最大值),j,j最小值,j最大值))
+
+#### 等比数列 {a,ar,ar^2,ar^3,...}
+
+通项公式为 $x_n = a r^{n}, n \in N$
+
+`序列(a r^n, n, 0, 10)`, `Sequence(a r^n, n, 1, 10)`: 生成等比数列的前11项，结果为列表 `{a, ar, ar^2, ..., ar^(10)}`。
+
+#### 给点序列生成标签序列
+- 随机生成点序列 `L_{P} = Sequence(RandomPointIn(0, 4, 0, 4), k, 1, 5)`
+- 用 `Tex` t命令生成点序列的标签序列 `L_{L} = Sequence(Text("P_{" + (k) + "}", Element(L_{P}, k), true, true), k, 1, Length(L_{P}))`
+
+![text label](images/text_label.png)
+
+#### 生成奇数点列 (i, 2i-1)
+- 生成滑动条 n = Slider(1,10)
+- 产生奇数点列 Sequence((i,2 i-1),i,1,n)：{(1,1),(2,3),{3,5},(4,7),(5,9)}
+
+#### 生成向量列表
+- 起点在x轴上的向量列表 `Sequence(Vector((k, 0), (k+1, 2)), k, -3, 3, 0.5)`
+- 向量矩阵 `Sequence(Sequence(Vector((k, j), (k +1, j+0.5)), k, -3, 3), j, 0, 4)`
+
+## 迭代
+
+### 阶乘的迭代实现
+形如 $a_{k+1}=f(k,a_k), k>s$, 给定初始值为 $(s,a_s)$, 得到 列表$\{a_s, a_{s+1}, \cdots, a_{s+n} \}$
+
+如：定义 $f(k,a)=(k+1)*a$，输入 $factorial = IterationList(f, {2, 2},5)$ 可以得到 $factorial = \{2,6,24,120,720\}$，这就是阶乘的迭代实现方法。
+
+### Fibonacci数列的迭代生成
+`{0，1，1，2，3，5，8，13，21，...}`为斐波拉契数列，有很多非常好的性质。
+
+特点：
+- 首项为 0，1
+- 通项公式为 $x_{n+2} = x_{n+1}+x_n, x_0=0, x_1=1, n \in N$
+
+- 假设初始值为 f0,f1, 常规设置 f0=0, f1=1, 或者 f0=f1=1
+- 迭代列表 fibonacci=`IterationList(a+b, a,b,{f0,f1},n)`, 其中n为迭代次数，可以用滑块条定义
+  

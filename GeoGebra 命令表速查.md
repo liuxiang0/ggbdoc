@@ -167,7 +167,7 @@
     - [插入 Insert](#%e6%8f%92%e5%85%a5-insert)
     - [交集 Intersection](#%e4%ba%a4%e9%9b%86-intersection)
     - [并集 Union](#%e5%b9%b6%e9%9b%86-union)
-    - [迭代数列 IterationList](#%e8%bf%ad%e4%bb%a3%e6%95%b0%e5%88%97-iterationlist)
+    - [迭代列表 IterationList](#%e8%bf%ad%e4%bb%a3%e5%88%97%e8%a1%a8-iterationlist)
     - [合并 Join](#%e5%90%88%e5%b9%b6-join)
     - [筛选 KeepIf](#%e7%ad%9b%e9%80%89-keepif)
     - [长度 Length](#%e9%95%bf%e5%ba%a6-length-1)
@@ -1257,11 +1257,26 @@ text 的方向和排列。
 ### 并集 Union
 `Union[List 1, List 2]`：合并两列表并去除重复的元素。
 
-### 迭代数列 IterationList
-`IterationList[Function, Number x0, Number n]`： 可以得到 n+1 个元素的列表， 其中元素是
-由函数带入 x0 经过多次迭代生成的。如：定义 $f(x)=x^2$，输入 $L = IterationList[f, 3, 2]$ 可以
+### 迭代列表 IterationList
+`IterationList[Function, Number x0, Number n]`： 可以得到 n+1 个元素的列表， 其中元素是由函数带入 x0 经过多次迭代生成的。  
+如：定义 $f(x)=x^2$，输入 $L = IterationList[f, 3, 2]$ 可以
 得到 $L = \{3, 9, 81\}$
 
+形如 $a_{k+1}=f(k,a_k), k>s$, 给定初始值为 $(s,a_s)$, 得到 列表$\{a_s, a_{s+1}, \cdots, a_{s+n} \}$
+
+**阶乘的迭代实现**
+如：定义 $f(k,a)=(k+1)*a$，输入 $factorial = IterationList(f, {2, 2},5)$ 可以得到 $factorial = \{2,6,24,120,720\}$。
+
+**Fibonacci数列的迭代生成**
+`{0，1，1，2，3，5，8，13，21，...}`为斐波拉契数列，有很多非常好的性质。
+
+特点：
+- 首项为 0，1
+- 通项公式为 $x_{n+2} = x_{n+1}+x_n, x_0=0, x_1=1, n \in N$
+
+- 假设初始值为 f0,f1, 常规设置 f0=0, f1=1, 或者 f0=f1=1
+- 迭代列表 fibonacci=`IterationList(a+b, a,b,{f0,f1},n)`, 其中n为迭代次数，可以用滑块条定义
+  
 ### 合并 Join
 `Join[List 1, List 2, ...]`： 将多个列表合并成一个列表。 这种合并保留相同元素， 不会重新排序。  
 `Join[List of lists]`： 将子列表合并得到一个更大的列表。 新列表包含所有元素， 并保留相同元素，不会重新排序。
