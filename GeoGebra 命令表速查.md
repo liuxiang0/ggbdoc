@@ -18,11 +18,10 @@
     - [近似解 Nsolve](#%e8%bf%91%e4%bc%bc%e8%a7%a3-nsolve)
     - [近似解集 NSolutions](#%e8%bf%91%e4%bc%bc%e8%a7%a3%e9%9b%86-nsolutions)
     - [复数解集 CSolutions](#%e5%a4%8d%e6%95%b0%e8%a7%a3%e9%9b%86-csolutions)
-    - [复数根 ComplexRoot](#%e5%a4%8d%e6%95%b0%e6%a0%b9-complexroot)
     - [精确解 Solve](#%e7%b2%be%e7%a1%ae%e8%a7%a3-solve)
     - [取余  Mod](#%e5%8f%96%e4%bd%99-mod)
     - [取整  Div](#%e5%8f%96%e6%95%b4-div)
-    - [实数域因式分解  IFactor](#%e5%ae%9e%e6%95%b0%e5%9f%9f%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3-ifactor)
+    - [实数域因式分解 IFactor](#%e5%ae%9e%e6%95%b0%e5%9f%9f%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3-ifactor)
     - [因式分解  Factor](#%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3-factor)
     - [因数个数  Divisors](#%e5%9b%a0%e6%95%b0%e4%b8%aa%e6%95%b0-divisors)
     - [因数列表  DivisorsList](#%e5%9b%a0%e6%95%b0%e5%88%97%e8%a1%a8-divisorslist)
@@ -46,13 +45,11 @@
     - [距离 Distance](#%e8%b7%9d%e7%a6%bb-distance)
     - [轴长 FirstAxisLength，SecondAxisLength](#%e8%bd%b4%e9%95%bf-firstaxislengthsecondaxislength)
     - [积分 Integral](#%e7%a7%af%e5%88%86-integral)
-    - [迭代 Iteration](#%e8%bf%ad%e4%bb%a3-iteration)
     - [长度 Length](#%e9%95%bf%e5%ba%a6-length)
     - [离心率 LinearEccentricity](#%e7%a6%bb%e5%bf%83%e7%8e%87-lineareccentricity)
     - [下和 LowerSum](#%e4%b8%8b%e5%92%8c-lowersum)
     - [上和 UpperSum](#%e4%b8%8a%e5%92%8c-uppersum)
     - [梯形和 TrapezoidalSum](#%e6%a2%af%e5%bd%a2%e5%92%8c-trapezoidalsum)
-    - [参数 Parameter](#%e5%8f%82%e6%95%b0-parameter)
     - [周长 Perimeter](#%e5%91%a8%e9%95%bf-perimeter)
     - [半径 Radius](#%e5%8d%8a%e5%be%84-radius)
     - [随机数 RandomBetween](#%e9%9a%8f%e6%9c%ba%e6%95%b0-randombetween)
@@ -69,7 +66,6 @@
     - [交点 Intersect](#%e4%ba%a4%e7%82%b9-intersect)
     - [中点 Midpoint](#%e4%b8%ad%e7%82%b9-midpoint)
     - [点 Point](#%e7%82%b9-point)
-    - [根 Root](#%e6%a0%b9-root)
     - [顶点 Vertex](#%e9%a1%b6%e7%82%b9-vertex)
   - [5. 线 Line](#5-%e7%ba%bf-line)
     - [直线 Line](#%e7%9b%b4%e7%ba%bf-line)
@@ -82,7 +78,7 @@
     - [角平分线 AngleBisector](#%e8%a7%92%e5%b9%b3%e5%88%86%e7%ba%bf-anglebisector)
     - [渐近线 Asymptote](#%e6%b8%90%e8%bf%91%e7%ba%bf-asymptote)
     - [系数列表 Coefficients](#%e7%b3%bb%e6%95%b0%e5%88%97%e8%a1%a8-coefficients)
-    - [复数根 ComplexRoot](#%e5%a4%8d%e6%95%b0%e6%a0%b9-complexroot-1)
+    - [复数根 ComplexRoot](#%e5%a4%8d%e6%95%b0%e6%a0%b9-complexroot)
     - [对称轴 Axes](#%e5%af%b9%e7%a7%b0%e8%bd%b4-axes)
     - [径 Diameter](#%e5%be%84-diameter)
     - [准线 Directrix](#%e5%87%86%e7%ba%bf-directrix)
@@ -106,19 +102,56 @@
     - [曲率向量 CurvatureVector](#%e6%9b%b2%e7%8e%87%e5%90%91%e9%87%8f-curvaturevector)
     - [方向向量 Direction](#%e6%96%b9%e5%90%91%e5%90%91%e9%87%8f-direction)
   - [8. 函数与微积分 Function and Calculus](#8-%e5%87%bd%e6%95%b0%e4%b8%8e%e5%be%ae%e7%a7%af%e5%88%86-function-and-calculus)
-    - [函数 Function](#%e5%87%bd%e6%95%b0-function)
-    - [条件函数  If](#%e6%9d%a1%e4%bb%b6%e5%87%bd%e6%95%b0-if)
-    - [次数  Degree](#%e6%ac%a1%e6%95%b0-degree)
-    - [分母  Denominator](#%e5%88%86%e6%af%8d-denominator)
-    - [导数  Derivative](#%e5%af%bc%e6%95%b0-derivative)
+    - [部分分式 PartialFractions](#%e9%83%a8%e5%88%86%e5%88%86%e5%bc%8f-partialfractions)
+    - [连分式 ContinueFraction](#%e8%bf%9e%e5%88%86%e5%bc%8f-continuefraction)
+    - [参数导数 ParametricDerivative](#%e5%8f%82%e6%95%b0%e5%af%bc%e6%95%b0-parametricderivative)
+    - [导数 Derivative](#%e5%af%bc%e6%95%b0-derivative)
+    - [迭代 Iteration](#%e8%bf%ad%e4%bb%a3-iteration)
+    - [迭代列表 IterationList](#%e8%bf%ad%e4%bb%a3%e5%88%97%e8%a1%a8-iterationlist)
+    - [定积分 NIntegral](#%e5%ae%9a%e7%a7%af%e5%88%86-nintegral)
     - [积分  Integral](#%e7%a7%af%e5%88%86-integral-1)
-    - [多项式  Polynomial](#%e5%a4%9a%e9%a1%b9%e5%bc%8f-polynomial)
+    - [积分介于 IntegralBetween](#%e7%a7%af%e5%88%86%e4%bb%8b%e4%ba%8e-integralbetween)
+    - [多项式次数  Degree](#%e5%a4%9a%e9%a1%b9%e5%bc%8f%e6%ac%a1%e6%95%b0-degree)
+    - [多项式函数  Polynomial](#%e5%a4%9a%e9%a1%b9%e5%bc%8f%e5%87%bd%e6%95%b0-polynomial)
+    - [函数 Function](#%e5%87%bd%e6%95%b0-function)
+    - [反函数 NInvert](#%e5%8f%8d%e5%87%bd%e6%95%b0-ninvert)
+    - [条件函数  If](#%e6%9d%a1%e4%bb%b6%e5%87%bd%e6%95%b0-if)
+    - [分母 Denominator](#%e5%88%86%e6%af%8d-denominator)
+    - [分子 Numerator](#%e5%88%86%e5%ad%90-numerator)
+    - [复数根 ComplexRoot](#%e5%a4%8d%e6%95%b0%e6%a0%b9-complexroot-1)
+    - [拐点 TurningPoint](#%e6%8b%90%e7%82%b9-turningpoint)
+    - [归一化 Normalize](#%e5%bd%92%e4%b8%80%e5%8c%96-normalize)
+    - [极限 Limit](#%e6%9e%81%e9%99%90-limit)
+    - [右极限 LimitAbove](#%e5%8f%b3%e6%9e%81%e9%99%90-limitabove)
+    - [左极限 LimitBelow](#%e5%b7%a6%e6%9e%81%e9%99%90-limitbelow)
+    - [解常微分方程 SolveODE](#%e8%a7%a3%e5%b8%b8%e5%be%ae%e5%88%86%e6%96%b9%e7%a8%8b-solveode)
+    - [解常微分方程组 NSolveODE](#%e8%a7%a3%e5%b8%b8%e5%be%ae%e5%88%86%e6%96%b9%e7%a8%8b%e7%bb%84-nsolveode)
+    - [矩形法则 RectangleSum](#%e7%9f%a9%e5%bd%a2%e6%b3%95%e5%88%99-rectanglesum)
+    - [零点 Root](#%e9%9b%b6%e7%82%b9-root)
+    - [零值点 Roots](#%e9%9b%b6%e5%80%bc%e7%82%b9-roots)
+    - [零值点列 RootList](#%e9%9b%b6%e5%80%bc%e7%82%b9%e5%88%97-rootlist)
+    - [路径值 PathParameter](#%e8%b7%af%e5%be%84%e5%80%bc-pathparameter)
+    - [密切圆 OsculatingCircle](#%e5%af%86%e5%88%87%e5%9c%86-osculatingcircle)
+    - [奇异值分解 SVD](#%e5%a5%87%e5%bc%82%e5%80%bc%e5%88%86%e8%a7%a3-svd)
+    - [三角式合并 TrigCombine](#%e4%b8%89%e8%a7%92%e5%bc%8f%e5%90%88%e5%b9%b6-trigcombine)
+    - [三角式化简 TrigSimplify](#%e4%b8%89%e8%a7%92%e5%bc%8f%e5%8c%96%e7%ae%80-trigsimplify)
+    - [三角式展开 TrigExpand](#%e4%b8%89%e8%a7%92%e5%bc%8f%e5%b1%95%e5%bc%80-trigexpand)
+    - [数值导数 NDerivative](#%e6%95%b0%e5%80%bc%e5%af%bc%e6%95%b0-nderivative)
+    - [泰勒公式 TaylorPolynomial](#%e6%b3%b0%e5%8b%92%e5%85%ac%e5%bc%8f-taylorpolynomial)
+    - [梯形法则 TrapezoidalSum](#%e6%a2%af%e5%bd%a2%e6%b3%95%e5%88%99-trapezoidalsum)
+    - [斜率场 SlopeField](#%e6%96%9c%e7%8e%87%e5%9c%ba-slopefield)
+    - [样条曲线 Spline](#%e6%a0%b7%e6%9d%a1%e6%9b%b2%e7%ba%bf-spline)
+    - [因式 Factors](#%e5%9b%a0%e5%bc%8f-factors)
+    - [因式分解 Factor](#%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3-factor-1)
+    - [复数域因式分解 CFactor](#%e5%a4%8d%e6%95%b0%e5%9f%9f%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3-cfactor)
+    - [复无理数域因式分解 CIFactor](#%e5%a4%8d%e6%97%a0%e7%90%86%e6%95%b0%e5%9f%9f%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3-cifactor)
+    - [隐式曲线 ImplicitCurve](#%e9%9a%90%e5%bc%8f%e6%9b%b2%e7%ba%bf-implicitcurve)
+    - [隐式微分 ImplicitDerivative](#%e9%9a%90%e5%bc%8f%e5%be%ae%e5%88%86-implicitderivative)
+    - [左和 LeftSum](#%e5%b7%a6%e5%92%8c-leftsum)
     - [展开  Expand](#%e5%b1%95%e5%bc%80-expand-1)
-    - [因式分解  Factor](#%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3-factor-1)
     - [转换为十进制  FromBase](#%e8%bd%ac%e6%8d%a2%e4%b8%ba%e5%8d%81%e8%bf%9b%e5%88%b6-frombase-1)
     - [转换进制  ToBase](#%e8%bd%ac%e6%8d%a2%e8%bf%9b%e5%88%b6-tobase-1)
     - [化简  Simplify](#%e5%8c%96%e7%ae%80-simplify-1)
-    - [泰勒展开式  TaylorPolynomial](#%e6%b3%b0%e5%8b%92%e5%b1%95%e5%bc%80%e5%bc%8f-taylorpolynomial)
   - [9. 圆锥曲线 Conic](#9-%e5%9c%86%e9%94%a5%e6%9b%b2%e7%ba%bf-conic)
     - [半焦距  LinearEccentricity](#%e5%8d%8a%e7%84%a6%e8%b7%9d-lineareccentricity)
     - [半圆 Semicircle](#%e5%8d%8a%e5%9c%86-semicircle)
@@ -140,7 +173,6 @@
     - [圆锥曲线 Conic](#%e5%9c%86%e9%94%a5%e6%9b%b2%e7%ba%bf-conic)
     - [中心 Center](#%e4%b8%ad%e5%bf%83-center)
     - [准线 Directrix](#%e5%87%86%e7%ba%bf-directrix-1)
-    - [密切圆 OsculatingCircle](#%e5%af%86%e5%88%87%e5%9c%86-osculatingcircle)
   - [10. 参数曲线 Parameter Curve](#10-%e5%8f%82%e6%95%b0%e6%9b%b2%e7%ba%bf-parameter-curve)
     - [曲线  Curve, CurveCartesian](#%e6%9b%b2%e7%ba%bf-curve-curvecartesian)
     - [参数曲线相关指令](#%e5%8f%82%e6%95%b0%e6%9b%b2%e7%ba%bf%e7%9b%b8%e5%85%b3%e6%8c%87%e4%bb%a4)
@@ -159,27 +191,41 @@
     - [表格文本 TableText](#%e8%a1%a8%e6%a0%bc%e6%96%87%e6%9c%ac-tabletext)
   - [13. 轨迹 Locus](#13-%e8%bd%a8%e8%bf%b9-locus)
   - [14. 列表 List](#14-%e5%88%97%e8%a1%a8-list)
-    - [附加 追加 Append](#%e9%99%84%e5%8a%a0-%e8%bf%bd%e5%8a%a0-append)
-    - [符合条件的数目 CountIf](#%e7%ac%a6%e5%90%88%e6%9d%a1%e4%bb%b6%e7%9a%84%e6%95%b0%e7%9b%ae-countif)
-    - [元素 Element](#%e5%85%83%e7%b4%a0-element)
-    - [First](#first)
-    - [Last](#last)
-    - [插入 Insert](#%e6%8f%92%e5%85%a5-insert)
-    - [交集 Intersection](#%e4%ba%a4%e9%9b%86-intersection)
+    - [扁平列表 Flatten](#%e6%89%81%e5%b9%b3%e5%88%97%e8%a1%a8-flatten)
     - [并集 Union](#%e5%b9%b6%e9%9b%86-union)
-    - [迭代列表 IterationList](#%e8%bf%ad%e4%bb%a3%e5%88%97%e8%a1%a8-iterationlist)
+    - [插入 Insert](#%e6%8f%92%e5%85%a5-insert)
+    - [乘积 Product](#%e4%b9%98%e7%a7%af-product)
+    - [点列 PointList](#%e7%82%b9%e5%88%97-pointlist)
     - [合并 Join](#%e5%90%88%e5%b9%b6-join)
+    - [互异 Unique](#%e4%ba%92%e5%bc%82-unique)
+    - [交集 Intersection](#%e4%ba%a4%e9%9b%86-intersection)
+    - [逆序排列 Reverse](#%e9%80%86%e5%ba%8f%e6%8e%92%e5%88%97-reverse)
+    - [频数列表 Frequency](#%e9%a2%91%e6%95%b0%e5%88%97%e8%a1%a8-frequency)
+    - [平秩列表 TiedRank](#%e5%b9%b3%e7%a7%a9%e5%88%97%e8%a1%a8-tiedrank)
+    - [序数列表 OrdinalRank](#%e5%ba%8f%e6%95%b0%e5%88%97%e8%a1%a8-ordinalrank)
+    - [去除 Remove](#%e5%8e%bb%e9%99%a4-remove)
+    - [去除未定义对象 RemoveUndefined](#%e5%8e%bb%e9%99%a4%e6%9c%aa%e5%ae%9a%e4%b9%89%e5%af%b9%e8%b1%a1-removeundefined)
+    - [升序排序 Sort](#%e5%8d%87%e5%ba%8f%e6%8e%92%e5%ba%8f-sort)
+    - [随机排列 Shuffle](#%e9%9a%8f%e6%9c%ba%e6%8e%92%e5%88%97-shuffle)
+    - [索引 IndexOf](#%e7%b4%a2%e5%bc%95-indexof)
+    - [提取 Take](#%e6%8f%90%e5%8f%96-take)
+    - [序列 Sequence](#%e5%ba%8f%e5%88%97-sequence)
+    - [序数列表 OrdinalRank](#%e5%ba%8f%e6%95%b0%e5%88%97%e8%a1%a8-ordinalrank-1)
+    - [选定索引 SelectedIndex](#%e9%80%89%e5%ae%9a%e7%b4%a2%e5%bc%95-selectedindex)
+    - [选定元素 SelectedElement](#%e9%80%89%e5%ae%9a%e5%85%83%e7%b4%a0-selectedelement)
+    - [随机元素 RandomElement](#%e9%9a%8f%e6%9c%ba%e5%85%83%e7%b4%a0-randomelement)
+    - [元素 Element](#%e5%85%83%e7%b4%a0-element)
+    - [最前元素 First](#%e6%9c%80%e5%89%8d%e5%85%83%e7%b4%a0-first)
+    - [最后元素 Last](#%e6%9c%80%e5%90%8e%e5%85%83%e7%b4%a0-last)
+    - [映射 Zip](#%e6%98%a0%e5%b0%84-zip)
+    - [附加 追加 Append](#%e9%99%84%e5%8a%a0-%e8%bf%bd%e5%8a%a0-append)
+    - [组限 Classes](#%e7%bb%84%e9%99%90-classes)
+    - [符合条件的数目 CountIf](#%e7%ac%a6%e5%90%88%e6%9d%a1%e4%bb%b6%e7%9a%84%e6%95%b0%e7%9b%ae-countif)
     - [筛选 KeepIf](#%e7%ad%9b%e9%80%89-keepif)
     - [长度 Length](#%e9%95%bf%e5%ba%a6-length-1)
     - [最小值 Min](#%e6%9c%80%e5%b0%8f%e5%80%bc-min)
     - [最大值 Max](#%e6%9c%80%e5%a4%a7%e5%80%bc-max-1)
-    - [内积 Product](#%e5%86%85%e7%a7%af-product)
-    - [移除未定义对象 RemoveUndefined](#%e7%a7%bb%e9%99%a4%e6%9c%aa%e5%ae%9a%e4%b9%89%e5%af%b9%e8%b1%a1-removeundefined)
-    - [排序 Sort](#%e6%8e%92%e5%ba%8f-sort)
-    - [反序 Reverse](#%e5%8f%8d%e5%ba%8f-reverse)
     - [求和 Sum](#%e6%b1%82%e5%92%8c-sum)
-    - [提取 Take](#%e6%8f%90%e5%8f%96-take)
-    - [序列 Sequence](#%e5%ba%8f%e5%88%97-sequence)
   - [15. 几何变换 Transformation](#15-%e5%87%a0%e4%bd%95%e5%8f%98%e6%8d%a2-transformation)
     - [位似 Dilate](#%e4%bd%8d%e4%bc%bc-dilate)
     - [对称, 镜像，反射 Reflect、Mirror](#%e5%af%b9%e7%a7%b0-%e9%95%9c%e5%83%8f%e5%8f%8d%e5%b0%84-reflectmirror)
@@ -371,10 +417,6 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 复数解集( <方程> )  
 如：Csolutions(x^2+1=0)：{-i,i}  
 
-### 复数根 ComplexRoot
-`复数根(<多项式>)`：计算多项式在 x 上的复数根，绘图区创建对应的点。  
-如： `复数根[x^2+4]`得出两个复数根：`(0+2ί)` 和 `(0-2ί)`。
-
 ### 精确解 Solve
 精确解( <方程> )  
 如：`solve(x^2-4=0)`: {x=-2,x=2}  
@@ -399,7 +441,7 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 取整( <被除数 @整数>, <除数 @整数> )
 取整( <被除式 @整式>, <除式 @整式> )：返回两个多项式的商。如：`取整[x^2+3x+1,x-1]` 得出 `f(x)=x+4`。
 
-### 实数域因式分解  IFactor
+### 实数域因式分解 IFactor
 实数域因式分解( <多项式> )
 如：`实数域因式分解(x² - 2)` 得到 $(x-\sqrt 2)(x + \sqrt{2})$  
 运算:  
@@ -559,12 +601,7 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 
 ### 积分 Integral
 `Integral[Function, Number a, Number b]`：计算某函数在$[a,b]$的积分。  
-`Integral[Function f, Function g, Number a, Number b]`：计算在区间$[a,b]$上， $f(x)-g(x)$的积
-分。
-
-### 迭代 Iteration
-`Iteration[Function, Number x0, Number n]`：给定起始值 x0，重复带入 f 函数 n 次。如：
-定义 $f(x)=x^2$，输入命令 `Iteration[f, 3, 2]` 就可以得到结果 81。
+`Integral[Function f, Function g, Number a, Number b]`：计算在区间$[a,b]$上， $f(x)-g(x)$的积分。
 
 ### 长度 Length
 `Length[Vector]`：计算向量的长度。  
@@ -579,22 +616,19 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 `LinearEccentricity[Conic]`：计算圆锥曲线的离心率。
 
 ### 下和 LowerSum
-`LowerSum[Function, Number a, Number b, Number n]`: 函數 f 在[a,b] 區間以 n 個長條區求出的面積下和。
-
-註: 此指令會同時繪出這些下和的長方形。
+`LowerSum[Function, Number a, Number b, Number n]`: 函數在[a,b] 区间以 n 个长条区求出的面积下和。  
+下和( <函数>, <x-起始值>, <x-终止值>, <矩形数量> )  
+注意: 此指令同时绘出这些下和的长方形。
 
 ### 上和 UpperSum
-`UpperSum[Function, Number a, Number b, Number n]`: 計算函數 f 在[a,b]區間以 n 個長條區求出的面積上和。
-
-註: 此指令亦可繪出這些上和的長方形。
+`UpperSum[Function, Number a, Number b, Number n]`: 计算函数在[a,b]区间以 n 个长条区求出的面积上和。  
+上和( <函数>, <x-起始值>, <x-终止值>, <矩形数量> )   
+注意: 此指令可绘出这些上和的长方形。
 
 ### 梯形和 TrapezoidalSum
 `TrapezoidalSum[Function, Number a, Number b, Number n of trapezoids]`: 計算函數 f 在區間 [a, b] 分成 n 個梯形的總和。
 
 註: 此指令會同時畫出函數下方的梯形。
-
-### 参数 Parameter
-`Parameter[Parabola]`：计算抛物线 p 的参数（准线和焦点间的距离）。
 
 ### 周长 Perimeter
 `Perimeter[Polygon]`：计算多边形周长。
@@ -653,13 +687,16 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 等待实现
 
 ### 极值点 Extremum
-`Extremum[Polynomial]`：计算多项式函数图像上的局部极值。
+`Extremum[Polynomial]`：计算多项式函数图像上的局部极值。  
+极值点( <多项式> )  
+极值点( <连续函数>, <x-起始值>, <x-终止值> )
 
 ### 焦点 Focus
 `Focus[Conic]`：得到圆锥曲线 c 的焦点。
 
 ### 拐点 InflectionPoint
 `InflectionPoint[Polynomial]`：计算多项式 f 的所有拐点。
+拐点( <多项式> )
 
 ### 交点 Intersect
 `Intersect[Line g, Line h]`：计算直线 g 和 h 的交点。  
@@ -686,11 +723,6 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 `Point[Polygon]`：得到多边形 p 上一点。  
 `Point[Vector]`：得到向量 v 上一点。  
 `Point[Point, Vector]`：得到从 P 点平移向量 v 之后的点。
-
-### 根 Root
-`Root[Polynomial]`：得到多项式的所有根。  
-`Root[Function, Number a]`：得到函数 f 在起始值 a 的一个根。  
-`Root[Function, Number a, Number b]`：得到函数 f 在区间$[a,b]$上的根。
 
 ### 顶点 Vertex
 `Vertex[Conic]`：生成圆锥曲线的全部顶点。
@@ -760,9 +792,9 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 如：渐近线[x^3+y^3+y^2-3x=0]返回集合对象{x+y=-0.33}。
 
 ### 系数列表 Coefficients
-⑴系数列表[<多项式>]：得出多项式 $a_kx^k+a_{k−1}x^{k−1}+⋯+a_1x+a_0$ 全部系数的集合$\{a_k,a_{k−1},\cdots,a_1,a_0\}$。
+系数列表( <多项式> )：得出多项式 $a_kx^k+a_{k−1}x^{k−1}+⋯+a_1x+a_0$ 全部系数的集合$\{a_k,a_{k−1},\cdots,a_1,a_0\}$。
 如：`系数列表[x^3-3x^2+3x]` 得出`{1,-3,3,0}`， $x^3−3x^2+3x$ 所有系数的集合。  
-⑵系数列表[<圆锥曲线>]：返回列表`{a,b,c,d,e,f}`，其由圆锥（二次）曲线的标准形式得出： $ax^2+by^2+c+dxy+ex+fy=0$。  
+系数列表( <圆锥曲线> )：返回列表`{a,b,c,d,e,f}`，其由圆锥（二次）曲线的标准形式得出： $ax^2+by^2+c+dxy+ex+fy=0$。  
 给定（隐式直线） $l:3x+2y-2=0$, 则 $x(l)$ 返回 3， $y(l)$ 返回 2，以及 $z(l)$ 返回-2。  
 对于由 $l:ax+by+c=0$ 所代表一条隐式直线，可以使用语句 $x(l)、 y(l)、 z(l)$ 来获得它的系数。
 
@@ -886,35 +918,20 @@ IsPrime[<数值>]：根据数值是否为质数得出 true 或 false。
 
 ## 8. 函数与微积分 Function and Calculus
 
-### 函数 Function
-`Function[Function, Number a, Number b]`：生成函数 $f 在 [a,b]$区间上函数图像。如：
-$f(x) = Function[x^2, -1, 1]$得到函数 $x^2$ 在区间$[-1,1]$上的函数图像。如果输入 $g(x) = 2f(x)$，
-将会得到 $g(x) = 2 x^2$，但这个函数的定义域并不限制在$[-1,1]$区间上。
+### 部分分式 PartialFractions
+部分分式( <函数> )  
 
-### 条件函数  If
-如果要建立条件函数可以使用布朗命令 `If`。如：
-$$f(x) = If [x<3, sin(x), x^2] 相当于：
-f(x)=\begin{cases} 
-    sin(x), & 当 x<3\\
-    x^2, & 当 x\geq 3
-\end{cases}$$
+运算:  
+部分分式( <函数> )  
+部分分式( <函数>, <变量> )
 
-### 次数  Degree
-次数[<多项式>]：给出一个多项式主变量的最高次方数。  
-如：次数[x^4+2x^2]得出 4。  
-运算区指令   
-⑴次数[<多项式>];  
-⑵次数[<多项式>,<变量>]：给出一个多项式中指定变量的最高次方数。  
-如：次数[x^4y^3+2x^2y^3,x]得出 4。
-次数[x^4y^3+2x^2y^3,y]得出 3。
+### 连分式 ContinueFraction
 
-### 分母  Denominator
-⑴分母[<函数>]：返回一个函数的分母。
-如：分母[5/(x^2+2)]得出 f(x)=(x^2+2)。  
-⑵分母[<表达式>]：返回一个有理数或表达式的分母。
-如：分母[2/3+1/15]得出 15
 
-### 导数  Derivative
+### 参数导数 ParametricDerivative
+参数导数( <曲线> )
+
+### 导数 Derivative
 `Derivative[Function]`：求函数 $f(x)$ 的导数（微分）$f'(x)$。  
 `Derivative[Function, Number n]`：求函数 $f(x)$ 的 $n$ 阶导数（$n$ 次微分）$\dfrac{\mathrm{d}^nf}{\mathrm{d}x^n}$。
 
@@ -936,22 +953,289 @@ f(x)=\begin{cases}
 导数( <表达式>, <变量> )  
 导数( <表达式>, <变量>, <阶数> )
 
+### 迭代 Iteration
+`Iteration[Function, Number x0, Number n]`：给定起始值 x0，重复带入 f 函数 n 次。如：
+定义 $f(x)=x^2$，输入命令 `Iteration[f, 3, 2]` 就可以得到结果 81。  
+迭代( <函数>, <起始值>, <迭代次数> )  
+迭代( <表达式>, <变量>, <起始值>, <次数> )
+
+### 迭代列表 IterationList
+`IterationList[Function, Number x0, Number n]`： 可以得到 n+1 个元素的列表， 其中元素是由函数带入 x0 经过多次迭代生成的。  
+迭代列表( <函数>, <起始值>, <迭代次数> )  
+迭代列表( <表达式>, <变量>, <起始值>, <次数> )
+
+如：定义 $f(x)=x^2$，输入 $L = IterationList[f, 3, 2]$ 可以
+得到 $L = \{3, 9, 81\}$
+
+形如 $a_{k+1}=f(k,a_k), k>s$, 给定初始值为 $(s,a_s)$, 得到 列表$\{a_s, a_{s+1}, \cdots, a_{s+n} \}$
+
+**阶乘的迭代实现**
+如：定义 $f(k,a)=(k+1)*a$，输入 $factorial = IterationList(f, {2, 2},5)$ 可以得到 $factorial = \{2,6,24,120,720\}$。
+
+**Fibonacci数列的迭代生成**
+`{0，1，1，2，3，5，8，13，21，...}`为斐波拉契数列，有很多非常好的性质, 如 黄金分割比例 Golden Ratio  
+$\lim\limits_{n \to \infty}\dfrac{f_{n+1}}{f_n}=\varphi=\dfrac{1+\sqrt{5}}{2} \approx 1.618$  
+
+等价于 $\dfrac{x+1}{x}=\dfrac{x}{1} \qquad or \qquad x^2-x-1=0 \;$的正根
+
+特点：
+- 首项为 0，1
+- 通项公式为 $x_{n+2} = x_{n+1}+x_n, x_0=0, x_1=1, n \in N$
+
+- 假设初始值为 f0,f1, 常规设置 f0=0, f1=1, 或者 f0=f1=1
+- 迭代列表 fibonacci=`IterationList(a+b, a,b,{f0,f1},n)`, 其中n为迭代次数，可以用滑块条定义
+
+### 定积分 NIntegral
+定积分( <函数> )  
+定积分( <函数>, <x-起始值>, <x-终止值> )  
+
+运算:  
+定积分( <函数>, <x-积分下限>, <x-积分上限> )  
+定积分( <函数>, <变量>, <积分下限>, <积分上限> )
+
 ### 积分  Integral
 `Integral[Function]`：求函数 f(x) 的不定积分。
+积分( <函数> )  
+积分( <函数>, <变量> )  
+积分( <函数>, <x-积分下限>, <x-积分上限> )  
+积分( <函数>, <x-积分下限>, <x-积分上限>, <是否给出积分值? true|false> )
 
-### 多项式  Polynomial
+运算:  
+积分( <函数> )  
+积分( <函数>, <变量> )  
+积分( <函数>, <x-积分下限>, <x-积分上限> )  
+积分( <函数>, <变量>, <积分下限>, <积分上限> )
+
+### 积分介于 IntegralBetween
+积分介于( <函数1>, <函数2>, <x-积分下限>, <x-积分上限> )  
+积分介于( <函数1>, <函数2>, <x-积分下限>, <x-积分上限>, <是否给出积分值? true|false> )
+
+运算:  
+积分介于( <函数1>, <函数2>, <x-积分下限>, <x-积分上限> )  
+积分介于( <函数1>, <函数2>, <变量>, <积分下限>, <积分上限> )
+
+### 多项式次数  Degree
+多项式次数( <多项式> )：给出一个多项式主变量的最高次方数。  
+如：多项式次数[x^4+2x^2]得出 4。  
+
+运算区指令:   
+⑴多项式次数( <多项式> );  
+⑵多项式次数( <多项式>, <变量> )：给出一个多项式中指定变量的最高次方数。  
+如：次数[x^4y^3+2x^2y^3,x]得出 4。
+次数[x^4y^3+2x^2y^3,y]得出 3。
+
+### 多项式函数  Polynomial
 `Polynomial[Function]`：求函数 f 的展开式。  
 `Polynomial[List of n points]`：建立经过 n 个点的 n-1 次多项式。
+多项式函数( <函数> )  
+多项式函数( <点列> )  
+
+运算:  
+多项式函数( <函数> )  
+多项式函数( <函数>, <变量> )  
+
+### 函数 Function
+`Function[Function, Number a, Number b]`：生成函数 $f 在 [a,b]$区间上函数图像。如：
+$f(x) = Function[x^3, -1, 1]$得到函数 $x^3$ 在区间$[-1,1]$上的函数图像。如果输入 $g(x) = 2f(x)$，
+将会得到 $g(x) = 2 x^3$，但这个函数的定义域限制在$[-1,1]$区间上。
+
+函数( <{x-起始值, x-终止值, 区间内等间距的若干纵坐标值}> )  
+函数( <函数>, <x-起始值>, <x-终止值> )  
+函数( <表达式>, <参变量1>, <起始值>, <终止值>, <参变量2>, <起始值>, <终止值> )
+
+运算:  
+函数( <函数>, <x-起始值>, <x-终止值> )
+
+![Function with Domain definition](images/function-define-with-domain.png)
+
+### 反函数 NInvert
+反函数( <函数> )
+
+### 条件函数  If
+如果要建立条件函数可以使用布朗命令 `If`。如：
+$$f(x) = If [x<3, sin(x), x^2] 相当于：
+f(x)=\begin{cases} 
+    sin(x), & 当 x<3\\
+    x^2, & 当 x\geq 3
+\end{cases}$$
+
+### 分母 Denominator
+分母( <函数> )：返回一个函数的分母。
+如：分母[5/(x^2+2)]得出 f(x)=(x^2+2)。  
+分母( <表达式> )：返回一个有理数或表达式的分母。
+如：分母[2/3+1/15]得出 15
+
+运算:  
+分母( <表达式> )
+
+### 分子 Numerator
+分子( <数值> )  
+分子( <函数> )
+
+运算:  
+分子( <表达式> )
+
+### 复数根 ComplexRoot
+`复数根(<多项式>)`：计算多项式在 x 上的复数根，绘图区创建对应的点。  
+如： `ComplexRoot[x^2+4]`得出两个复数根：`(0+2ί)` 和 `(0-2ί)`。
+
+### 拐点 TurningPoint
+拐点( <多项式> )
+
+### 归一化 Normalize
+归一化( <数值列表> )  
+归一化( <点列> )
+
+### 极限 Limit
+极限( <函数>, <数值> )  
+
+运算:  
+极限( <表达式>, <数值> )  
+极限( <表达式>, <变量>, <数值> )
+
+### 右极限 LimitAbove
+右极限( <函数>, <数值> )  
+
+运算:  
+右极限( <表达式>, <数值> )  
+右极限( <表达式>, <变量>, <数值> )
+
+### 左极限 LimitBelow
+左极限( <函数>, <数值> )
+
+运算:  
+左极限( <表达式>, <数值> )  
+左极限( <表达式>, <变量>, <数值> )
+
+### 解常微分方程 SolveODE
+解常微分方程( <f'(x, y)> )  
+解常微分方程( <f'(x, y)>, <f上的点> )  
+解常微分方程( <f'(x, y)>, <起始 x>, <起始y>, <终止x>, <步长> )  
+解常微分方程( <y'>, <x'>, <起始 x>, <起始y>, <终止t>, <步长> )  
+解常微分方程( <b(x)>, <c(x)>, <f(x)>, <起始x>, <起始y>, <起始y'>, <终止x>, <步长> )
+
+运算:  
+解常微分方程( <方程> )  
+解常微分方程( <方程>, <f上的点> )  
+解常微分方程( <方程>, <f上的点>, <f'上的点> )  
+解常微分方程( <方程>, <因变量>, <自变量>, <f上的点> )  
+解常微分方程( <方程>, <因变量>, <自变量>, <f上的点>, <f'上的点> )
+
+### 解常微分方程组 NSolveODE
+解常微分方程组( <导数列表>, <x坐标初值>, <y坐标初值列表>, <x坐标终值> )
+
+### 矩形法则 RectangleSum
+矩形法则( <函数>, <x-起始值>, <x-终止值>, <矩形数量>, <矩形起始位置 0 #左和~1 #右和> )
+
+### 零点 Root
+`Root[Polynomial]`：得到多项式的所有根。  
+`Root[Function, Number a]`：得到函数 f 在起始值 a 的一个根。  
+`Root[Function, Number a, Number b]`：得到函数 f 在区间$[a,b]$上的根。  
+零点( <多项式> )  
+零点( <函数>, <x-初值> )  
+零点( <函数>, <x-起始值>, <x-终止值> )
+
+运算:  
+零点( <多项式> )
+
+### 零值点 Roots
+零值点( <函数>, <x-起始值>, <x-终止值> )
+
+### 零值点列 RootList
+零值点列( <数值列表> )
+
+### 路径值 PathParameter
+路径值( <路径上的点> )
+
+### 密切圆 OsculatingCircle
+`OsculatingCircle[Point, Function]`：建立函数 f 在点 A 的密切圆。  
+`OsculatingCircle[Point, Curve]`：建立曲线 c 在点 A 的密切圆。  
+密切圆( <点>, <对象> )
+
+### 奇异值分解 SVD
+奇异值分解( <矩阵> )
+
+### 三角式合并 TrigCombine
+三角式合并( <表达式> )  
+三角式合并( <表达式>, <目标函数> )
+
+### 三角式化简 TrigSimplify
+三角式化简( <表达式> )
+
+### 三角式展开 TrigExpand
+三角式展开( <表达式> )  
+三角式展开( <表达式>, <目标函数> )
+
+运算:  
+三角式展开( <表达式> )  
+三角式展开( <表达式>, <目标函数> )  
+三角式展开( <表达式>, <目标函数>, <目标变量> )  
+三角式展开( <表达式>, <目标函数>, <目标变量1>, <目标变量2> )
+
+### 数值导数 NDerivative
+数值导数( <函数> )
+
+### 泰勒公式 TaylorPolynomial
+`TaylorPolynomial[Function, Number a, Number n]`：建立函数 $f(x)$ 在点 $x=a$ 的 $n$ 次泰勒展开式。  
+泰勒公式( <函数>, <横坐标x值>, <阶数> )  
+
+运算:  
+泰勒公式( <表达式>, <横坐标x值>, <阶数> )  
+泰勒公式( <表达式>, <变量>, <变量值>, <阶数> )
+
+### 梯形法则 TrapezoidalSum
+梯形法则( <函数>, <x-起始值>, <x-终止值>, <梯形数量> )
+
+### 斜率场 SlopeField
+斜率场( <f(x, y)> )  
+斜率场( <f(x, y)>, <数值 n> )  
+斜率场( <f(x, y)>, <数值 n>, <长度倍增器a> )  
+斜率场( <f(x, y)>, <数值 n>, <长度倍增器a>, <x最小值>, <y最小值>, <x最大值>, <y最大值> )
+
+### 样条曲线 Spline
+样条曲线( <点列> )  
+样条曲线( <点列>, <阶数 ≥ 3> )  
+样条曲线( <点列>, <阶数 ≥ 3>, <权重函数> )
+
+### 因式 Factors
+因式( <多项式> )  
+因式( <数值> )
+
+### 因式分解 Factor
+`Factor[Polynomial]`：将多项式转换成因式乘法形式。
+这个指令在有理数上因式分解表达式。若要在复数上进行因式分解，参见复数因式分解指令。  
+如：`因式分解[x^2+x-6]` 得出 `(x+3)(x-2)`。
+
+### 复数域因式分解 CFactor
+只适用于运算区 - CAS  
+运算:  
+复数域因式分解( <表达式> )  
+复数域因式分解( <表达式>, <变量> )
+
+### 复无理数域因式分解 CIFactor
+只适用于运算区 - CAS  
+运算:  
+复无理数域因式分解( <表达式> )  
+复无理数域因式分解( <表达式>, <变量> )
+
+### 隐式曲线 ImplicitCurve
+隐式曲线( <点列 #点数为(n(n+3))/2, 曲线次数为n> )  
+隐式曲线( <f(x, y)> )
+
+### 隐式微分 ImplicitDerivative
+隐式微分( <f(x, y)> )
+
+运算:  
+隐式微分( <f(x, y)> )  
+隐式微分( <表达式>, <因变量>, <自变量> )
+
+### 左和 LeftSum
+左和( <函数>, <x-起始值>, <x-终止值>, <矩形数量> )
 
 ### 展开  Expand
 `Expand[Function]`：将式子按乘法展开。  
 展开[<表达式>]: 展开表达式。  
 如：`展开[(2x-1)^2+2x+3]` 得出 $4x^2−2x+4$。
-
-### 因式分解  Factor
-`Factor[Polynomial]`：将多项式转换成因式乘法形式。
-这个指令在有理数上因式分解表达式。若要在复数上进行因式分解，参见复数因式分解指令。  
-如：`因式分解[x^2+x-6]` 得出 `(x+3)(x-2)`。
 
 ### 转换为十进制  FromBase
 转换为十进制["<数值作为文本>",<2-36 间的底数>]：以给定的底数（进制）将指定数值转换为十进制。底数必须在 2 与 36 之间。数值必须是一个整数。  
@@ -972,9 +1256,6 @@ f(x)=\begin{cases}
 - Simplify[sin(x) / cos(x)]得到 $f(x)=tan(x)$
 - Simplify[-2 sin(x) cos(x)]得到 $f(x)=sin(-2x)$
 
-### 泰勒展开式  TaylorPolynomial
-`TaylorPolynomial[Function, Number a, Number n]`：建立函数 $f(x)$ 在点 $x=a$ 的 $n$ 次泰勒展
-开式。
 
 ## 9. 圆锥曲线 Conic
 
@@ -1028,6 +1309,7 @@ f(x)=\begin{cases}
 可以认为极线是过 P 点做此圆锥曲线两条虚切线切点的连线。
 
 ### 焦参数 Parameter
+`Parameter[Parabola]`：计算抛物线的参数（准线和焦点间的距离）。  
 焦参数( <抛物线> )：返回抛物线的参数（焦距），即准线与焦点的距离。
 如：焦参数[y=x^2-3x+5]返回 0.5。
 
@@ -1099,10 +1381,6 @@ f(x)=\begin{cases}
 
 ### 准线 Directrix
 准线[<抛物线>]：得出圆锥（二次）曲线（抛物线）的准线。`准线[x^2-3x+3y=9]` 得出直线 `y=4.5`。
-
-### 密切圆 OsculatingCircle
-`OsculatingCircle[Point, Function]`：建立函数 f 在点 A 的密切圆。  
-`OsculatingCircle[Point, Curve]`：建立曲线 c 在点 A 的密切圆。
 
 
 ## 10. 参数曲线 Parameter Curve
@@ -1224,62 +1502,182 @@ text 的方向和排列。
 
 ## 14. 列表 List
 
-### 附加 追加 Append
-`Append[List, Object]`：将对象加入列表中成为新的列表的最后一个元素。  
-`Append[Object, List]`：将对象加入列表中成为新的列表的第一个元素。
+### 扁平列表 Flatten
+扁平列表( <列表> )
 
-### 符合条件的数目 CountIf
-`CountIf[Condition, List]`： 计算符合条件的元素个数。 如： `CountIf[x < 3, {1, 2, 3, 4, 5}]`得
-到 2。
+两个列表交叉产生一个新的列表，采用：  
+Flatten(Zip({p, q}, p, list1, q, list2))
 
-### 元素 Element
-`Element[List, Number n]`：调用列表中的第 n 个元素。
+### 并集 Union
+`Union[List 1, List 2]`：合并两列表并去除重复的元素, 结果是集合，不允许有重复项。  
+并集( <列表1>, <列表2> )  
+并集( <多边形1>, <多边形2> )
 
-### First 
-`First[List]`：得到列表中的第一个元素。  
-`First[List, Number n of elements]`：得到一个包含给定列表中前 n 个元素的新列表。
-
-### Last 
-`Last[List]`：得到列表中的最后一个元素。  
-`Last[List, Number n of elements]`：得到一个包含给定列表中后 n 个元素的新列表。
+注意：Join(list1, list2) 与 Union（list1,list2)有所不同，Join不会清除列表中的相同项，Union会清除重复项.   
+如：l1={1,2,3,2}, l2={"a","b","a","b"}
+(1) 并集(l1, l2) 或 Union(l1,l2): {1,2,3,"a","b"}
+(2) 合并({l1, l2}) 或 Join(l1,l2): {1,2,3,2,"a","b","a","b"}
 
 ### 插入 Insert
 `Insert[Object, List, Position]`：将对象插入到列表的指定位置。
 `Insert[List 1, List 2, Position]`: 將 list1 的所有元素插入到 list2 中指定的位置。  
+插入( <列表1>, <列表2>, <列表2中序数位置> )  
+插入( <对象>, <列表>, <列表中序数位置> )  
+
 例: Insert[{11, 12}, {1, 2, 3, 4, 5}, 3] 將 list1 所有元素插入到list2 的第三個 (與隨後的) 位置並得到新串列 {1, 2, 11, 12, 3, 4, 5}  
 註: 若指定的位置為負值，則位置由右邊算起。  
 例: Insert[{11, 12}, {1, 2, 3, 4, 5}, -2] 將list1 所有元素插入到list2 的倒數第二個位置並得到串列
 {1, 2, 3, 4, 11, 12, 5}.  
 
-### 交集 Intersection
-`Intersection[List 1, List 2]`：将两个列表的公共部分生成一个新的列表。
+### 乘积 Product
+`Product[List of numbers]`：计算列表中所有数字的乘积。  
+乘积( <原始数据列表> )  
+乘积( <数值列表>, <前若干元素数量> )  
+乘积( <数值列表>, <频数列表> )  
+乘积( <表达式>, <变量>, <起始值>, <终止值> )  
 
-### 并集 Union
-`Union[List 1, List 2]`：合并两列表并去除重复的元素。
+运算:  
+乘积( <表达式列表> )  
+乘积( <表达式>, <变量>, <变量起始值>, <变量终止值> )
 
-### 迭代列表 IterationList
-`IterationList[Function, Number x0, Number n]`： 可以得到 n+1 个元素的列表， 其中元素是由函数带入 x0 经过多次迭代生成的。  
-如：定义 $f(x)=x^2$，输入 $L = IterationList[f, 3, 2]$ 可以
-得到 $L = \{3, 9, 81\}$
+### 点列 PointList
+点列( <有序数组列表的列表> )
 
-形如 $a_{k+1}=f(k,a_k), k>s$, 给定初始值为 $(s,a_s)$, 得到 列表$\{a_s, a_{s+1}, \cdots, a_{s+n} \}$
-
-**阶乘的迭代实现**
-如：定义 $f(k,a)=(k+1)*a$，输入 $factorial = IterationList(f, {2, 2},5)$ 可以得到 $factorial = \{2,6,24,120,720\}$。
-
-**Fibonacci数列的迭代生成**
-`{0，1，1，2，3，5，8，13，21，...}`为斐波拉契数列，有很多非常好的性质。
-
-特点：
-- 首项为 0，1
-- 通项公式为 $x_{n+2} = x_{n+1}+x_n, x_0=0, x_1=1, n \in N$
-
-- 假设初始值为 f0,f1, 常规设置 f0=0, f1=1, 或者 f0=f1=1
-- 迭代列表 fibonacci=`IterationList(a+b, a,b,{f0,f1},n)`, 其中n为迭代次数，可以用滑块条定义
-  
 ### 合并 Join
 `Join[List 1, List 2, ...]`： 将多个列表合并成一个列表。 这种合并保留相同元素， 不会重新排序。  
-`Join[List of lists]`： 将子列表合并得到一个更大的列表。 新列表包含所有元素， 并保留相同元素，不会重新排序。
+`Join[List of lists]`： 将子列表合并得到一个更大的列表。 新列表包含所有元素， 并保留相同元素，不会重新排序。  
+合并( <列表的列表> )  
+合并( <列表1>, <列表2>, ... )  
+结果是列表，允许重复项存在，这点与Union不同。
+
+两个列表交叉产生一个新的列表，采用：  
+Flatten(Zip({p, q}, p, list1, q, list2))
+
+### 互异 Unique
+互异( <列表> )
+
+### 交集 Intersection
+`Intersection[List 1, List 2]`：将两个列表的公共部分生成一个新的列表。  
+交集( <列表1>, <列表2> )
+
+### 逆序排列 Reverse
+`Reverse[List]`：倒序排列列表。  
+逆序排列( <列表> )
+
+### 频数列表 Frequency
+频数列表( <原始数据列表> )  
+频数列表( <是否累积? true|false>, <原始数据列表> )  
+频数列表( <组界列表>, <原始数据列表> )  
+频数列表( <文本列表1>, <文本列表2> )  
+频数列表( <是否累积? true|false>, <组界列表>, <原始数据列表> )  
+频数列表( <组界列表>, <原始数据列表>, <是否应用密度>, <密度缩放因子(可选)> )  
+频数列表( <是否累积? true|false>, <组界列表>, <原始数据列表>, <是否应用密度>, <密度缩放因子(可选)> )
+
+### 平秩列表 TiedRank
+平秩列表( <列表> )
+
+### 序数列表 OrdinalRank
+序数列表( <列表> )
+
+### 去除 Remove
+去除( <列表1>, <列表2> )
+
+### 去除未定义对象 RemoveUndefined
+`RemoveUndefined[List]`：移除列表中没有定义的对象。  
+去除未定义对象( <列表> )
+
+### 升序排序 Sort
+`Sort[List]`： 对列表中的数值、 文字或点做排序。 如： `Sort[{3, 2, 1}]`可得到列表`{1, 2, 3}`。  
+升序排列( <列表> )  
+升序排列( <数值列表>, <关键字列表> )
+
+### 随机排列 Shuffle
+随机排列( <列表> )
+
+### 索引 IndexOf
+索引( <对象>, <列表> )  
+索引( "<文本1>", "<文本2>" )  
+索引( <对象>, <列表>, <起始索引> )  
+索引( "<文本1>", "<文本2>", <起始索引> )
+
+### 提取 Take
+`Take[List, Start position m, End position n]`： 提取列表中第 m 个元素到第 n 个元素组成新
+的列表。  
+提取( <列表>, <起始位置> )  
+提取( "<文本>", <起始位置> )  
+提取( <列表>, <起始位置>, <终止位置> )  
+提取( "<文本>", <起始位置>, <终止位置> )  
+
+运算:  
+提取( <列表>, <起始位置> )  
+提取( <列表>, <起始位置>, <终止位置> )
+
+### 序列 Sequence
+`Sequence[Expression, Variable i, Number a, Number b]`：生成一个序列，使用给定的表达
+式及变量 i 从 a 到 b 变化。  
+序列( <终止值> )  
+序列( <起始值>, <终止值> )  
+序列( <起始值>, <终止值>, <增量> )  
+序列( <表达式>, <变量>, <起始值>, <终止值> )  
+序列( <表达式>, <变量>, <起始值>, <终止值>, <增量> )
+
+如： `L = Sequence[(i, 1), i, 1, 5]`得到的点序列， x 坐标变化从 1 到
+5，如下图所示。  
+
+![sequence point](images/sequence-point.png)
+
+`Sequence[Expression, Variable i, Number a, Number b, Number s]`： 生成一个序列， 使用给
+定的表达式及变量 i 从 a 到 b 变化，其中步长为 s。如： `L = Sequence[(i, 1), i, 1, 5, 0.5]` 得到
+的点序列， x 坐标变化从 1 到 5，步长为 0.5。如下图所示。
+
+![sequence point2](images/sequence-point2.png)
+
+### 序数列表 OrdinalRank
+序数列表( <列表> )
+
+### 选定索引 SelectedIndex
+选定索引( <下拉列表> )
+
+### 选定元素 SelectedElement
+选定元素( <下拉列表> )
+
+### 随机元素 RandomElement
+随机元素( <列表> )
+
+### 元素 Element
+`Element[List, Number n]`：调用列表中的第 n 个元素。  
+元素( <列表>, <元素位置> )  
+元素( <矩阵>, <行序>, <列序> )  
+元素( <列表>, <索引1>, <索引2>, ... )  
+
+运算:  
+元素( <列表>, <元素位置> )  
+元素( <矩阵>, <行序>, <列序> )
+
+### 最前元素 First 
+`First[List]`：得到列表中的第一个元素。  
+`First[List, Number n of elements]`：得到一个包含给定列表中前 n 个元素的新列表。
+
+### 最后元素 Last 
+`Last[List]`：得到列表中的最后一个元素。  
+`Last[List, Number n of elements]`：得到一个包含给定列表中后 n 个元素的新列表。
+
+### 映射 Zip
+映射( <表达式>, <变量1>, <列表1>, <变量2>, <列表2>, ... )
+
+### 附加 追加 Append
+`Append[List, Object]`：将对象加入列表中成为新的列表的最后一个元素。  
+`Append[Object, List]`：将对象加入列表中成为新的列表的第一个元素。  
+追加( <列表>, <对象> )  
+追加( <对象>, <列表> )
+
+### 组限 Classes
+组限( <数据列表>, <组的数量> )  
+组限( <数据列表>, <起点>, <组的宽度> )
+
+### 符合条件的数目 CountIf
+`CountIf[Condition, List]`： 计算符合条件的元素个数。 如： `CountIf[x < 3, {1, 2, 3, 4, 5}]`得
+到 2。
 
 ### 筛选 KeepIf
 `KeepIf[Condition, List]`： 筛选列表中符合条件的元素。 如： `KeepIf[x<3, {1, 2, 3, 4, 1, 5, 6}]`
@@ -1294,37 +1692,8 @@ text 的方向和排列。
 ### 最大值 Max
 `Max[List]`：得到列表中最大的元素。
 
-### 内积 Product
-`Product[List of numbers]`：计算列表中所有数字的乘积。
-
-### 移除未定义对象 RemoveUndefined
-`RemoveUndefined[List]`：移除列表中没有定义的对象。
-
-### 排序 Sort
-`Sort[List]`： 对列表中的数值、 文字或点做排序。 如： `Sort[{3, 2, 1}]`可得到列表`{1, 2, 3}`。
-
-### 反序 Reverse
-`Reverse[List]`：倒序排列列表。
-
 ### 求和 Sum
 `Sum[List]`： 计算列表中所有元素之和。 该命令可以用于数值、 点、 向量、 文字和函数。
-
-### 提取 Take
-`Take[List, Start position m, End position n]`： 提取列表中第 m 个元素到第 n 个元素组成新
-的列表。
-
-### 序列 Sequence
-`Sequence[Expression, Variable i, Number a, Number b]`：生成一个序列，使用给定的表达
-式及变量 i 从 a 到 b 变化。如： `L = Sequence[(i, 1), i, 1, 5]`得到的点序列， x 坐标变化从 1 到
-5，如下图所示。  
-
-![sequence point](images/sequence-point.png)
-
-`Sequence[Expression, Variable i, Number a, Number b, Number s]`： 生成一个序列， 使用给
-定的表达式及变量 i 从 a 到 b 变化，其中步长为 s。如： `L = Sequence[(i, 1), i, 1, 5, 0.5]` 得到
-的点序列， x 坐标变化从 1 到 5，步长为 0.5。如下图所示。
-
-![sequence point2](images/sequence-point2.png)
 
 
 ## 15. 几何变换 Transformation

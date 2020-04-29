@@ -16,6 +16,7 @@
   - [迭代](#%e8%bf%ad%e4%bb%a3)
     - [阶乘的迭代实现](#%e9%98%b6%e4%b9%98%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%ae%9e%e7%8e%b0)
     - [Fibonacci数列的迭代生成](#fibonacci%e6%95%b0%e5%88%97%e7%9a%84%e8%bf%ad%e4%bb%a3%e7%94%9f%e6%88%90)
+  - [如何制作一根弹簧？](#%e5%a6%82%e4%bd%95%e5%88%b6%e4%bd%9c%e4%b8%80%e6%a0%b9%e5%bc%b9%e7%b0%a7)
 
 
 # GeoGebra 应用案例
@@ -47,7 +48,7 @@ $$f(x) = \begin{cases}
 
 ### 伸缩变换：Stretch(圆，向量)
 
-输入命令： $Stretch(circle, r \vec u), r$ 为伸缩比例。中文指令：`伸缩(d, r 向量(u))`， 此处 $\vec{u}=(1,0)$ 在 x 轴方向上缩放，如 $\vec{v}=(0,1)$, 则在 y 轴方向上缩放。
+输入命令： $Stretch(circle, r \vec u), r$ 为伸缩比例。中文指令：`伸缩(d, r 向量(u))`， 此处 $\vec{u}=(1,0)$ 在 $x$ 轴方向上缩放，如 $\vec{v}=(0,1)$, 则在 $y$ 轴方向上缩放。向量$\vec u$和$\vec v$组合起来，就可以构成斜椭圆。参见下图
 
 ![伸缩变换-圆到椭圆](images\圆到椭圆.gif)
 
@@ -165,4 +166,15 @@ $$x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}\Big(1+\frac{f(x_n) \cdot f''(x_n)}{2f'(x_n
 
 - 假设初始值为 f0,f1, 常规设置 f0=0, f1=1, 或者 f0=f1=1
 - 迭代列表 fibonacci=`IterationList(a+b, a,b,{f0,f1},n)`, 其中n为迭代次数，可以用滑块条定义
-  
+
+## 如何制作一根弹簧？
+
+弹簧可以看作空间螺线，投影到xOy平面是一个圆，故可以通过圆的参数方程来完成。
+
+- n = Slider(1,10,1)
+- r = Slider(1,5,0.2)
+- k = Slider(0,1,0.1)
+- c = Curve(r cos(t), r sin(t), k t, t, -2nπ, 2nπ
+
+![弹簧实例](images/tanhuang.png)
+
