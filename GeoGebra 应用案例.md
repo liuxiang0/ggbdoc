@@ -1,4 +1,5 @@
 - [GeoGebra 应用案例](#geogebra-%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b)
+  - [光滑曲面实例](#%e5%85%89%e6%bb%91%e6%9b%b2%e9%9d%a2%e5%ae%9e%e4%be%8b)
   - [分段函数 Piecewise Function](#%e5%88%86%e6%ae%b5%e5%87%bd%e6%95%b0-piecewise-function)
   - [圆到椭圆方法](#%e5%9c%86%e5%88%b0%e6%a4%ad%e5%9c%86%e6%96%b9%e6%b3%95)
     - [伸缩变换：Stretch(圆，向量)](#%e4%bc%b8%e7%bc%a9%e5%8f%98%e6%8d%a2stretch%e5%9c%86%e5%90%91%e9%87%8f)
@@ -17,9 +18,33 @@
     - [阶乘的迭代实现](#%e9%98%b6%e4%b9%98%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%ae%9e%e7%8e%b0)
     - [Fibonacci数列的迭代生成](#fibonacci%e6%95%b0%e5%88%97%e7%9a%84%e8%bf%ad%e4%bb%a3%e7%94%9f%e6%88%90)
   - [如何制作一根弹簧？](#%e5%a6%82%e4%bd%95%e5%88%b6%e4%bd%9c%e4%b8%80%e6%a0%b9%e5%bc%b9%e7%b0%a7)
+  - [优秀共享资源分享](#%e4%bc%98%e7%a7%80%e5%85%b1%e4%ba%ab%e8%b5%84%e6%ba%90%e5%88%86%e4%ba%ab)
 
 
 # GeoGebra 应用案例
+
+## 光滑曲面实例
+
+$s1: z(x,y)=xy$
+![z(x,y)=xy](images/xy.png)
+
+$s2: z(x,y)=sin(x) sin(y)$
+![z(x,y)=sin(x)sin(y)](images/sin(x)sin(y).png)
+
+$s3: z(x,y)=cos(x) cos(y)$
+![z(x,y)=cos(x)cos(y)](images/cos(x)cos(y).png)
+
+$s4: z(x,y)=cos(x-y) \iff s2(x,y) + s3(x,y)$
+![z(x,y)=cos(x-y)](images/cos(x-y).png)
+
+$s5: z(x,y)=cos(x+y) \iff -s2(x,y) + s3(x,y)$
+![z(x,y)=cos(x+y)](images/cos(x+y).png)
+
+$s6: z(x,y)=sin(x-y) \iff sin(x) cos(y)- cos(x) sin(y)$
+![z(x,y)=sin(x-y)](images/sin(x-y).png)
+
+$s7: z(x,y)=sin(x+y) \iff sin(x) cos(y) + cos(x) sin(y)$
+![z(x,y)=sin(x+y)](images/sin(x+y).png)
 
 
 ## 分段函数 Piecewise Function
@@ -178,3 +203,8 @@ $$x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}\Big(1+\frac{f(x_n) \cdot f''(x_n)}{2f'(x_n
 
 ![弹簧实例](images/tanhuang.png)
 
+
+## 优秀共享资源分享
+
+1. [Thijs](https://www.geogebra.org/u/thijs): 3D Surfaces such as Klein Bottle, Crossing Twisted Rings, Nuzzle, Inverse Stereographic, Hohenwarter Delaunay, Escher Conformal Grid, Torus knot, Clifford Torus, Split Torus, Hilbert Curve, Times Tables, Butterfly Curve, Plant Growing, Arc Hex Fractal, Pythagoras Tree, Dragon Turtle, Blow up, Celtic pattern,etc
+2. [Diego Lieban](https://www.geogebra.org/u/diegolieban): Books for 3D Printing, 4DFrame soccer ball,

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<title>GeoGebra - 作图过程</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"></head>
+<body>
+<h1>Fibonacci Spiral &#26000;&#27874;&#37027;&#22865;&#34746;&#26059;&#24418;</h1>
+<table border="1">
+<tr>
+<th>&#24207;&#21495;</th>
+<th>&#21517;&#31216;</th>
+<th>&#25551;&#36848;</th>
+<th>&#25968;&#20540;</th>
+<th>&#26631;&#39064;</th>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td><span style="color:#006400">1</span></td>
+<td><span style="color:#006400">多边形 poly1</span></td>
+<td><span style="color:#006400">&#22810;&#36793;&#24418;((-0.62, -4.18), (2.38, -4.18), 4)</span></td>
+<td><span style="color:#006400">poly1 = 9</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td>2</td>
+<td>数值 n</td>
+<td>&nbsp;</td>
+<td>n = 3</td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td><span style="color:#006400">3</span></td>
+<td><span style="color:#006400">角度 α</span></td>
+<td>&nbsp;</td>
+<td><span style="color:#006400">α = 90°</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td>4</td>
+<td>射线 f</td>
+<td>&#31471;&#28857;&#20026; &#39030;&#28857;(poly1, 2), &#26041;&#21521;&#21521;&#37327;&#20026; &#21521;&#37327;((1, -1)) &#30340;&#23556;&#32447;</td>
+<td>f: x + y = -1.8</td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td>5</td>
+<td>弧线 c</td>
+<td>&#22278;&#24359;(&#25551;&#28857;(f, (90&#176; - &#945;) &#x2F; (90&#176;)), &#39030;&#28857;(poly1, 3), &#39030;&#28857;(poly1, 1))</td>
+<td>c = 4.71</td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td><span style="color:#006400">6</span></td>
+<td><span style="color:#006400">列表 l1</span></td>
+<td><span style="color:#006400">&#36845;&#20195;&#21015;&#34920;(&#24179;&#31227;(&#20301;&#20284;(&#26059;&#36716;(p, -&#945;, &#39030;&#28857;(p, 1)), (sqrt(5) - 1) &#x2F; 2, &#39030;&#28857;(p, 1)), &#21521;&#37327;(&#39030;&#28857;(p, 1), &#39030;&#28857;(p, 3))), p, {poly1}, n)</span></td>
+<td><span style="color:#006400">l1 = {9, 3.44, 1.31, 0.5}</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td><span style="color:#006400">7</span></td>
+<td><span style="color:#006400">列表 l2</span></td>
+<td><span style="color:#006400">&#26144;&#23556;(&#22278;&#24359;(&#25551;&#28857;(&#23556;&#32447;(&#39030;&#28857;(E, 2), &#21521;&#37327;(&#27861;&#21521;&#37327;(&#32447;&#27573;(&#39030;&#28857;(E, 3), &#39030;&#28857;(E, 1))))), (90&#176; - &#945;) &#x2F; (90&#176;)), &#39030;&#28857;(E, 3), &#39030;&#28857;(E, 1)), E, l1)</span></td>
+<td><span style="color:#006400">l2 = {4.71, 2.91, 1.8, 1.11}</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td>8</td>
+<td>文本 text1</td>
+<td>&nbsp;</td>
+<td>"Fibonacci Spiral 斐波那契螺旋线绘制，
+来源 孟宝兴和迟中金"</td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td><span style="color:#444444">9</span></td>
+<td><span style="color:#444444">点 A</span></td>
+<td><span style="color:#444444">&#30452;&#32447;(&#39030;&#28857;(&#20803;&#32032;(l1, 1), 4), &#39030;&#28857;(&#20803;&#32032;(l1, 2), 4)) &#19982; &#30452;&#32447;(&#39030;&#28857;(&#20803;&#32032;(l1, 1), 2), &#39030;&#28857;(&#20803;&#32032;(l1, 2), 2)) &#30340;&#20132;&#28857;</span></td>
+<td><span style="color:#444444">A = (2.38, -1.18)</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td>10</td>
+<td>直线 g</td>
+<td>&#30452;&#32447; &#39030;&#28857;(&#20803;&#32032;(l1, 1), 4)&#39030;&#28857;(&#20803;&#32032;(l1, 2), 4)</td>
+<td>g: y = -1.18</td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td>11</td>
+<td>直线 h</td>
+<td>&#30452;&#32447; &#39030;&#28857;(&#20803;&#32032;(l1, 1), 2)&#39030;&#28857;(&#20803;&#32032;(l1, 2), 2)</td>
+<td>h: x = 2.38</td>
+<td>&nbsp;</td>
+</tr>
+<tr style='vertical-align:baseline;'>
+<td>12</td>
+<td>线段 i</td>
+<td>&#32447;&#27573; &#39030;&#28857;(poly1, 1)A</td>
+<td>i = 4.24</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+Created with <a href="https://www.geogebra.org/" target="_blank" >GeoGebra</a>
+<!-- Base64 string so that this file can be opened in GeoGebra with File -> Open -->
+<applet width='1' height='1' code='' style="display:none">
+<param name="ggbBase64" value="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">
+</applet>
+</body>
+</html>
