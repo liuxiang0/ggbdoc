@@ -1,9 +1,6 @@
 - [GeoGebra 应用案例](#geogebra-%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b)
 <<<<<<< HEAD
   - [光滑曲面实例](#%e5%85%89%e6%bb%91%e6%9b%b2%e9%9d%a2%e5%ae%9e%e4%be%8b)
-=======
-  - [光滑曲面](#%e5%85%89%e6%bb%91%e6%9b%b2%e9%9d%a2)
->>>>>>> 8a95944212afaf54fb3ed5f4266607f8a173dcea
   - [分段函数 Piecewise Function](#%e5%88%86%e6%ae%b5%e5%87%bd%e6%95%b0-piecewise-function)
   - [圆到椭圆方法](#%e5%9c%86%e5%88%b0%e6%a4%ad%e5%9c%86%e6%96%b9%e6%b3%95)
     - [伸缩变换：Stretch(圆，向量)](#%e4%bc%b8%e7%bc%a9%e5%8f%98%e6%8d%a2stretch%e5%9c%86%e5%90%91%e9%87%8f)
@@ -28,9 +25,6 @@
 # GeoGebra 应用案例
 
 ## 光滑曲面实例
-=======
-## 光滑曲面
->>>>>>> 8a95944212afaf54fb3ed5f4266607f8a173dcea
 
 $s1: z(x,y)=xy$
 ![z(x,y)=xy](images/xy.png)
