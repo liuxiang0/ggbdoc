@@ -1,5 +1,4 @@
 - [GeoGebra 应用案例](#geogebra-%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b)
-<<<<<<< HEAD
   - [光滑曲面实例](#%e5%85%89%e6%bb%91%e6%9b%b2%e9%9d%a2%e5%ae%9e%e4%be%8b)
   - [分段函数 Piecewise Function](#%e5%88%86%e6%ae%b5%e5%87%bd%e6%95%b0-piecewise-function)
   - [圆到椭圆方法](#%e5%9c%86%e5%88%b0%e6%a4%ad%e5%9c%86%e6%96%b9%e6%b3%95)
@@ -11,13 +10,13 @@
     - [举例 - 黄金分割比率 Golden Ratio](#%e4%b8%be%e4%be%8b---%e9%bb%84%e9%87%91%e5%88%86%e5%89%b2%e6%af%94%e7%8e%87-golden-ratio)
   - [点阵和向量阵](#%e7%82%b9%e9%98%b5%e5%92%8c%e5%90%91%e9%87%8f%e9%98%b5)
     - [通项公式](#%e9%80%9a%e9%a1%b9%e5%85%ac%e5%bc%8f)
-      - [等比数列 {a,ar,ar^2,ar^3,...}](#%e7%ad%89%e6%af%94%e6%95%b0%e5%88%97-aarar2ar3)
+      - [等比数列 $\{a,ar,ar^2,ar^3,...\}$](#%e7%ad%89%e6%af%94%e6%95%b0%e5%88%97-math-xmlns%22httpwwww3org1998mathmathml%22semanticsmrowmo-stretchy%22false%22momiamimo-separator%22true%22momiamimirmimo-separator%22true%22momiamimsupmirmimn2mnmsupmo-separator%22true%22momiamimsupmirmimn3mnmsupmo-separator%22true%22momi-mathvariant%22normal%22mimi-mathvariant%22normal%22mimi-mathvariant%22normal%22mimo-stretchy%22false%22momrowannotation-encoding%22applicationx-tex%22aarar2ar3annotationsemanticsmathaarar2ar3)
       - [给点序列生成标签序列](#%e7%bb%99%e7%82%b9%e5%ba%8f%e5%88%97%e7%94%9f%e6%88%90%e6%a0%87%e7%ad%be%e5%ba%8f%e5%88%97)
-      - [生成奇数点列 (i, 2i-1)](#%e7%94%9f%e6%88%90%e5%a5%87%e6%95%b0%e7%82%b9%e5%88%97-i-2i-1)
+      - [生成奇数点列 $\{(i, 2i-1),i,1,n\}$](#%e7%94%9f%e6%88%90%e5%a5%87%e6%95%b0%e7%82%b9%e5%88%97-math-xmlns%22httpwwww3org1998mathmathml%22semanticsmrowmo-stretchy%22false%22momo-stretchy%22false%22momiimimo-separator%22true%22momn2mnmiimimo%e2%88%92momn1mnmo-stretchy%22false%22momo-separator%22true%22momiimimo-separator%22true%22momn1mnmo-separator%22true%22mominmimo-stretchy%22false%22momrowannotation-encoding%22applicationx-tex%22i-2i-1i1nannotationsemanticsmathi2i%e2%88%921i1n)
       - [生成向量列表](#%e7%94%9f%e6%88%90%e5%90%91%e9%87%8f%e5%88%97%e8%a1%a8)
   - [迭代](#%e8%bf%ad%e4%bb%a3)
-    - [阶乘的迭代实现](#%e9%98%b6%e4%b9%98%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%ae%9e%e7%8e%b0)
-    - [Fibonacci数列的迭代生成](#fibonacci%e6%95%b0%e5%88%97%e7%9a%84%e8%bf%ad%e4%bb%a3%e7%94%9f%e6%88%90)
+    - [1. 阶乘的迭代实现 $x_{n+1} \leftarrow  f(x_n)$](#1-%e9%98%b6%e4%b9%98%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%ae%9e%e7%8e%b0-math-xmlns%22httpwwww3org1998mathmathml%22semanticsmrowmsubmixmimrowminmimomomn1mnmrowmsubmo%e2%86%90momifmimo-stretchy%22false%22momsubmixmiminmimsubmo-stretchy%22false%22momrowannotation-encoding%22applicationx-tex%22xn1-leftarrow-fxnannotationsemanticsmathxn1%e2%80%8b%e2%86%90fxn%e2%80%8b)
+    - [2. Fibonacci数列的迭代生成](#2-fibonacci%e6%95%b0%e5%88%97%e7%9a%84%e8%bf%ad%e4%bb%a3%e7%94%9f%e6%88%90)
   - [如何制作一根弹簧？](#%e5%a6%82%e4%bd%95%e5%88%b6%e4%bd%9c%e4%b8%80%e6%a0%b9%e5%bc%b9%e7%b0%a7)
   - [优秀共享资源分享](#%e4%bc%98%e7%a7%80%e5%85%b1%e4%ba%ab%e8%b5%84%e6%ba%90%e5%88%86%e4%ba%ab)
 
@@ -27,25 +26,25 @@
 ## 光滑曲面实例
 
 $s1: z(x,y)=xy$
-![z(x,y)=xy](images/xy.png)
+![z(x,y)=xy](images\xy.png)
 
 $s2: z(x,y)=sin(x) sin(y)$
-![z(x,y)=sin(x)sin(y)](images/sin(x)sin(y).png)
+![z(x,y)=sin(x)sin(y)](images\sin(x)sin(y).png)
 
 $s3: z(x,y)=cos(x) cos(y)$
-![z(x,y)=cos(x)cos(y)](images/cos(x)cos(y).png)
+![z(x,y)=cos(x)cos(y)](images\cos(x)cos(y).png)
 
 $s4: z(x,y)=cos(x-y) \iff s2(x,y) + s3(x,y)$
-![z(x,y)=cos(x-y)](images/cos(x-y).png)
+![z(x,y)=cos(x-y)](images\cos(x-y).png)
 
 $s5: z(x,y)=cos(x+y) \iff -s2(x,y) + s3(x,y)$
-![z(x,y)=cos(x+y)](images/cos(x+y).png)
+![z(x,y)=cos(x+y)](images\cos(x+y).png)
 
 $s6: z(x,y)=sin(x-y) \iff sin(x) cos(y)- cos(x) sin(y)$
-![z(x,y)=sin(x-y)](images/sin(x-y).png)
+![z(x,y)=sin(x-y)](images\sin(x-y).png)
 
 $s7: z(x,y)=sin(x+y) \iff sin(x) cos(y) + cos(x) sin(y)$
-![z(x,y)=sin(x+y)](images/sin(x+y).png)
+![z(x,y)=sin(x+y)](images\sin(x+y).png)
 
 
 ## 分段函数 Piecewise Function
@@ -86,11 +85,11 @@ Let $f: \Reals \to \Reals, x \mapsto f(x)$ be a differentiable function where $f
 $$x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}   \qquad  (1)$$
 yields a better approximation for a zero crossing.
 
-主要用来解决方程 $f(x)=0$ 的精确求根，假设 $f(x)$ 是给定区间的 $C^2 \; Function$ 函数，即两阶连续函数，根据Taylor展开得到x附近的展开式：
+主要用来解决方程 $f(x)=0$ 的精确求根，假设 $f(x)$ 是给定区间的 $C^2 \; Function$ 函数，即两阶连续函数，根据Taylor展开得到 $x$ 附近的展开式：
 
 $$f(x+\delta)=f(x)+\delta f'(x)+O(\delta ^2)$$
 
-当 $\delta$ 很小时，有 $f(x+\delta) =0 \approx f(x)+\delta f'(x)$
+当 $\delta$ 很小时，即 $|\delta|<\varepsilon$, 有 $f(x+\delta) =0 \approx f(x)+\delta f'(x)$
 
 $$\delta=-\dfrac{f(x)}{f'(x)} \\[2ex]
 x+\delta = x-\dfrac{f(x)}{f'(x)}$$
@@ -100,8 +99,8 @@ x+\delta = x-\dfrac{f(x)}{f'(x)}$$
 注意：上述迭代方法，在很多情况下不收敛(not converge,we say chaotic sometimes)，即极限不存在。
 
 ### GeoGebra中演示步骤
-1. 建立函数 `f: x^2-ln(x)-2`
-2. 根据牛顿迭代法，求出迭代函数 `g: x - f(x)/f'(x)`
+1. 建立函数 `f: x^2-ln(x)-2` | $f: x^2-ln(x)-2$
+2. 根据牛顿迭代法，求出迭代函数 `g: x - f(x)/f'(x)` | $g: x - f(x)/f'(x)$
 3. 为了控制迭代次数，建立一个滑动条 `n=Slider(0,10,1)`
 4. 给定迭代初始值 $x_0 = 3$, 根据不同函数，应取靠近可能的根附近的任意数
 5. 为了保留迭代过程，创建一个迭代列表 `xn=IterationList(g(x), x_0, n)`
@@ -115,7 +114,7 @@ x+\delta = x-\dfrac{f(x)}{f'(x)}$$
 ![newton's iteration](images\newton_iteration.gif)
 
 ### Cubic iteration 三次迭代
-
+比上述多取一项，成为二次多项式：
 $$f(x+\delta)=f(x)+\delta f'(x)+ \frac{\delta ^2}{2}f''(x)+ O(\delta ^3)$$
 
 当 $\delta$ 很小时，有 $f(x+\delta) =0 \approx f(x)+\delta f'(x)+\frac{\delta ^2}{2} f''(x)$
@@ -156,20 +155,20 @@ $$x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}\Big(1+\frac{f(x_n) \cdot f''(x_n)}{2f'(x_n
 - Sequence(含有变量 i 的通项,i,1,n)
 - Flatten(Sequence(Sequence(含有i和j的通项,i,i最小值,i最大值),j,j最小值,j最大值))
 
-#### 等比数列 {a,ar,ar^2,ar^3,...}
+#### 等比数列 $\{a,ar,ar^2,ar^3,...\}$
 
 通项公式为 $x_n = a r^{n}, n \in N$
 
-`序列(a r^n, n, 0, 10)`, `Sequence(a r^n, n, 1, 10)`: 生成等比数列的前11项，结果为列表 `{a, ar, ar^2, ..., ar^(10)}`。
+`序列(a r^n, n, 0, 10)`, `Sequence(a r^n, n, 0, 10)`: 生成等比数列的前11项，结果为列表 $\{a, ar, ar^2, ..., ar^{10}\}$。
 
 #### 给点序列生成标签序列
-- 随机生成点序列 `L_{P} = Sequence(RandomPointIn(0, 4, 0, 4), k, 1, 5)`
+- 随机生成点序列 `L_{P} = Sequence(RandomPointIn(0, 4, 0, 4), k, 1, 11)`
 - 用 `Tex` t命令生成点序列的标签序列 `L_{L} = Sequence(Text("P_{" + (k) + "}", Element(L_{P}, k), true, true), k, 1, Length(L_{P}))`
 
-![text label](images/text_label.png)
+![text label](images\text_label.png)
 
-#### 生成奇数点列 (i, 2i-1)
-- 生成滑动条 n = Slider(1,10)
+#### 生成奇数点列 $\{(i, 2i-1),i,1,n\}$
+- 生成滑动条 n = Slider(1,20)
 - 产生奇数点列 Sequence((i,2 i-1),i,1,n)：{(1,1),(2,3),{3,5},(4,7),(5,9)}
 
 #### 生成向量列表
@@ -178,31 +177,37 @@ $$x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}\Big(1+\frac{f(x_n) \cdot f''(x_n)}{2f'(x_n
 
 ## 迭代
 
-### 阶乘的迭代实现
+### 1. 阶乘的迭代实现 $x_{n+1} \leftarrow  f(x_n)$
 形如 $a_{k+1}=f(k,a_k), k>s$, 给定初始值为 $(s,a_s)$, 得到 列表$\{a_s, a_{s+1}, \cdots, a_{s+n} \}$
 
-如：定义 $f(k,a)=(k+1)*a$，输入 $factorial = IterationList(f, {2, 2},5)$ 可以得到 $factorial = \{2,6,24,120,720\}$，这就是阶乘的迭代实现方法。
+如：定义 $f(k,a)=(k+1)*a$，输入 $factorial = IterationList(f, {2, 2},5)$ 可以得到 $factorial = \{2,6,24,120,720\}$，这就是 **阶乘** 的迭代实现方法。这里的初值也可以为{1，1} 或 {0，1}
 
-### Fibonacci数列的迭代生成
+### 2. Fibonacci数列的迭代生成
 `{0，1，1，2，3，5，8，13，21，...}`为斐波拉契数列，有很多非常好的性质。
 
 特点：
 - 首项为 0，1
 - 通项公式为 $x_{n+2} = x_{n+1}+x_n, x_0=0, x_1=1, n \in N$
-
 - 假设初始值为 f0,f1, 常规设置 f0=0, f1=1, 或者 f0=f1=1
-- 迭代列表 fibonacci=`IterationList(a+b, a,b,{f0,f1},n)`, 其中n为迭代次数，可以用滑块条定义
+- 迭代列表 fibonacci=`IterationList(a+b, a,b,{f0,f1},n)`, 其中 $n$ 为迭代次数，可以用滑块条定义 `n=Slider(5,30,1)`
+- 斐波那契点列 `fp=Sequence((k, Element(fibonacci, k)), k, 1, Length(fibonacci))`
+- 指数拟合上述点列，`指数拟合(fp)` `FitExp(fp)` | $h(x)=0.46 e^{0.48x}$
+- 生长曲线拟合, `生长曲线拟合(fp)`  `FitGrowth(fp)` | $0.46 \cdot 1.62^x$
+
+注意：由此可见，指数函数 $b^x$, 可以用 自然数指数函数代替 $e^{ax}$, 这里 $a=ln(b)$, 所以数学上讨论比较多的是 $e^x$ 函数， 可以模拟自然界很多自然现象，如人口模型。
+
+![Fit Fibonacci Points](images\FitFibonacci.png)
+
 
 ## 如何制作一根弹簧？
-
-弹簧可以看作空间螺线，投影到xOy平面是一个圆，故可以通过圆的参数方程来完成。
+弹簧可以看作空间螺线，投影到 $xOy$ 平面是一个圆，故可以通过圆的参数方程来完成。以下就是 圆柱螺线的参数方程表示：
 
 - n = Slider(1,10,1)
 - r = Slider(1,5,0.2)
 - k = Slider(0,1,0.1)
-- c = Curve(r cos(t), r sin(t), k t, t, -2nπ, 2nπ
+- **c = Curve(r cos(t), r sin(t), k t, t, -2nπ, 2nπ)**
 
-![弹簧实例](images/tanhuang.png)
+![弹簧实例](images\tanhuang.png)
 
 
 ## 优秀共享资源分享
