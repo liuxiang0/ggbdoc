@@ -25,9 +25,18 @@
 
 ## 光滑曲面实例
 
-$s1: z(x,y)=xy$
+1. 马鞍面  
+   马鞍面就是双曲抛物面,因为形状像马鞍所以得名,形如
+$s1: z(x,y)=xy$ 或 标准方程 $2z = \frac{x^2}{a^2}-\frac{y^2}{b^2} \;(a,b>0)$
 ![z(x,y)=xy](images\xy.png)
 
+  - 用曲面命令 `Surface(u,v,uv,u,-1,1,v,-1,1)` | $\vec{c}=(u,v,uv)^T$，指定了定义域 $D=[-1,1]\times[-1,1]$
+  - 直接输入多变量函数Multivariable Function `xy` | $b(x,y)=xy$, 定义域为整个实平面
+  - 直接输入双曲抛物面方程Hyperbolic Paraboloid `z=xy` | $f: -xy+z=0$
+  - 定义两个滑动条 a,b=Slider(0.1,3)
+  - 直接输入双曲抛物面方程 `2z=x^2/a^2-y^2/b^2`
+
+2. 无穷平滑面  
 $s2: z(x,y)=sin(x) sin(y)$
 ![z(x,y)=sin(x)sin(y)](images\sin(x)sin(y).png)
 
@@ -45,6 +54,11 @@ $s6: z(x,y)=sin(x-y) \iff sin(x) cos(y)- cos(x) sin(y)$
 
 $s7: z(x,y)=sin(x+y) \iff sin(x) cos(y) + cos(x) sin(y)$
 ![z(x,y)=sin(x+y)](images\sin(x+y).png)
+
+曲面实现方法总结：
+- 函数，包括显函数和隐函数，如 f(x)=a cosh(x/a), g(x)=sin(cosh(x)), h(x)=cos(sinh(x)) 都是显函数， x^2+y^2+z^2=r^2 就是隐函数
+- 方程，
+- 
 
 
 ## 分段函数 Piecewise Function
