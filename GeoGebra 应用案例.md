@@ -2,6 +2,7 @@
   - [分形 Fractal](#%e5%88%86%e5%bd%a2-fractal)
     - [科赫雪花曲线 Koch Snowflakes](#%e7%a7%91%e8%b5%ab%e9%9b%aa%e8%8a%b1%e6%9b%b2%e7%ba%bf-koch-snowflakes)
   - [光滑曲面实例](#%e5%85%89%e6%bb%91%e6%9b%b2%e9%9d%a2%e5%ae%9e%e4%be%8b)
+  - [阿基米德螺线（等距螺线）](#%e9%98%bf%e5%9f%ba%e7%b1%b3%e5%be%b7%e8%9e%ba%e7%ba%bf%e7%ad%89%e8%b7%9d%e8%9e%ba%e7%ba%bf)
   - [分段函数 Piecewise Function](#%e5%88%86%e6%ae%b5%e5%87%bd%e6%95%b0-piecewise-function)
   - [圆到椭圆方法](#%e5%9c%86%e5%88%b0%e6%a4%ad%e5%9c%86%e6%96%b9%e6%b3%95)
     - [伸缩变换：Stretch(圆，向量)](#%e4%bc%b8%e7%bc%a9%e5%8f%98%e6%8d%a2stretch%e5%9c%86%e5%90%91%e9%87%8f)
@@ -109,9 +110,18 @@ TS2=Sequence[TriangleLines[Element[TP1, floor((i - 1) / 3) + 1], Mod[i - 1, 3] +
 
 ## 光滑曲面实例
 
-$s1: z(x,y)=xy$
+1. 马鞍面  
+   马鞍面就是双曲抛物面,因为形状像马鞍所以得名,形如
+$s1: z(x,y)=xy$ 或 标准方程 $2z = \frac{x^2}{a^2}-\frac{y^2}{b^2} \;(a,b>0)$
 ![z(x,y)=xy](images\xy.png)
 
+  - 用曲面命令 `Surface(u,v,uv,u,-1,1,v,-1,1)` | $\vec{c}=(u,v,uv)^T$，指定了定义域 $D=[-1,1]\times[-1,1]$
+  - 直接输入多变量函数Multivariable Function `xy` | $b(x,y)=xy$, 定义域为整个实平面
+  - 直接输入双曲抛物面方程Hyperbolic Paraboloid `z=xy` | $f: -xy+z=0$
+  - 定义两个滑动条 a,b=Slider(0.1,3)
+  - 直接输入双曲抛物面方程 `2z=x^2/a^2-y^2/b^2`
+
+2. 无穷平滑面  
 $s2: z(x,y)=sin(x) sin(y)$
 ![z(x,y)=sin(x)sin(y)](images\sin(x)sin(y).png)
 
@@ -130,6 +140,22 @@ $s6: z(x,y)=sin(x-y) \iff sin(x) cos(y)- cos(x) sin(y)$
 $s7: z(x,y)=sin(x+y) \iff sin(x) cos(y) + cos(x) sin(y)$
 ![z(x,y)=sin(x+y)](images\sin(x+y).png)
 
+曲面实现方法总结：
+- 函数，包括显函数和隐函数，如 f(x)=a cosh(x/a), g(x)=sin(cosh(x)), h(x)=cos(sinh(x)) 都是显函数， x^2+y^2+z^2=r^2 就是隐函数
+- 方程，
+- 
+
+## 阿基米德螺线（等距螺线）
+在Geogebra中命令行栏 输入：  
+- 极坐标表示： $a+b\theta$,得到极坐标表示的螺线为 `c: Curve((a + b θ; θ), θ, 0, π n)`, 其中
+`n=Slider(0,7)`
+- 直接 `c'`, 得到导函数 `Curve(c'(u), u, -7, 7)`
+- 输入命令 `Derivative(c)`, 得到导函数的参数方程, 即原来极坐标变成直接坐标系，x=(a+bθ)cosθ, y=(a+bθ)sinθ, 各分量对 θ 参数求导，就是导函数 $\frac{dc}{d\theta}=(\frac{dx}{d\theta}, \frac{dy}{d\theta}), 0\le \theta \le n\pi$ 
+- 上面两个结果一样，只是定义域不一样而已。
+
+![阿基米德螺线](images\阿基米德螺线.png)
+
+[阿基米德螺线 GGB](阿基米德螺线.ggb)
 
 ## 分段函数 Piecewise Function
 
