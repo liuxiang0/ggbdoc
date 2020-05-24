@@ -1,4 +1,6 @@
 - [GeoGebra 应用案例](#geogebra-%e5%ba%94%e7%94%a8%e6%a1%88%e4%be%8b)
+  - [分形 Fractal](#%e5%88%86%e5%bd%a2-fractal)
+    - [科赫雪花曲线 Koch Snowflakes](#%e7%a7%91%e8%b5%ab%e9%9b%aa%e8%8a%b1%e6%9b%b2%e7%ba%bf-koch-snowflakes)
   - [光滑曲面实例](#%e5%85%89%e6%bb%91%e6%9b%b2%e9%9d%a2%e5%ae%9e%e4%be%8b)
   - [分段函数 Piecewise Function](#%e5%88%86%e6%ae%b5%e5%87%bd%e6%95%b0-piecewise-function)
   - [圆到椭圆方法](#%e5%9c%86%e5%88%b0%e6%a4%ad%e5%9c%86%e6%96%b9%e6%b3%95)
@@ -22,6 +24,88 @@
 
 
 # GeoGebra 应用案例
+
+## 分形 Fractal
+### 科赫雪花曲线 Koch Snowflakes 
+
+**Koch Snowflake**  
+Please make sure that Java 1.4.2 (or later) is installed and active in your browser (Click [here](http://java.sun.com/getjava) to install Java now)
+1. Construct an equilateral triangle.
+2. Hide the polygon.
+3. Use the Dilate Object From Point By Factor tool to dilate point B from point A by a factor of 2/3.
+4. Use the Dilate Object From Point By Factor tool to dilate point A from point B by a factor of 2/3.
+5. Use the Segment tool to draw the three segments trisecting sebment AB.
+6. Color the middle segment white and increase the thickness of the segment (to make it appear to disappear).
+7. Use the Rotate Object Around Point By Angle tool to rotate point B' around point A' by 60 degrees clockwise.
+8. Use the Segment tool to construct segments AB" and B'B".
+9. Select all points and reduce the size to 1 and uncheck Show Label.
+10. Select Create New Tool from the file menu.
+11. Select the four segments (including the white one), and the three interior points A', B', B" as output objects.
+12. Select points A and B as input objects.
+13. Name the tool and click Finish.
+14. Use the newly created tool to construct the Koch Snowflake.
+
+Michelle Krummel, Created with [GeoGebra](http://www.geogebra.org/)
+
+**如何用迭代命令创建分形图案？**
+1. 正三角形情形
+  - Define A1={{A, B}, {B, C}, {C, A}}
+  - B1=Polygon(Join(Sequence(Element(A1, i), i, 1, Length(A1))))
+  - A2=Join(Sequence({{Element(Element(A1, i), 1), 2 / 3 * Element(Element(A1, i), 1) + 1 / 3 * Element(Element(A1, i), 2)}, {2 / 3 * Element(Element(A1, i), 1) + 1 / 3 * Element(Element(A1, i), 2), Rotate(1 / 3 * Element(Element(A1, i), 1) + 2 / 3 * Element(Element(A1, i), 2), 300°, 2 / 3 * Element(Element(A1, i), 1) + 1 / 3 * Element(Element(A1, i), 2))}, {Rotate(1 / 3 * Element(Element(A1, i), 1) + 2 / 3 * Element(Element(A1, i), 2), 300°, 2 / 3 * Element(Element(A1, i), 1) + 1 / 3 * Element(Element(A1, i), 2)), 1 / 3 * Element(Element(A1, i), 1) + 2 / 3 * Element(Element(A1, i), 2)}, {1 / 3 * Element(Element(A1, i), 1) + 2 / 3 * Element(Element(A1, i), 2), Element(Element(A1, i), 2)}}, i, 1, Length(A1)))
+  - 拖动A2和B1到A7和B7
+  - 创建 滑动条 n=Slider(0,7,1)
+  - 设置 Bi 的显示条件为 n==i (i=1,2,3,4,5,6,7)
+  - 动画 n 即可
+  
+2. 一条线段情形
+  - 在Spreadsheet-表格中 定义单元格 A1={{A, B}}, 此处A和B为线段的两个端点
+  - B1=Polyline(Join(Sequence(Element(A1, i), i, 1, Length(A1))))  
+  - A2=Join(Sequence({{Element(Element(A1,i),1), Dilate(Element(Element(A1,i),1), 2 / 3, Element(Element(A1,i),2))}, {Dilate(Element(Element(A1,i),1), 2 / 3, Element(Element(A1,i),2)), Rotate(Dilate(Element(Element(A1,i),2), 2 / 3, Element(Element(A1,i),1)), -(60°), Dilate(Element(Element(A1,i),1), 2 / 3, Element(Element(A1,i),2)))}, {Rotate(Dilate(Element(Element(A1,i),2), 2 / 3, Element(Element(A1,i),1)), -(60°), Dilate(Element(Element(A1,i),1), 2 / 3, Element(Element(A1,i),2))), Dilate(Element(Element(A1,i),2), 2 / 3, Element(Element(A1,i),1))}, {Dilate(Element(Element(A1,i),2), 2 / 3, Element(Element(A1,i),1)), Element(Element(A1,i),2)}},i,1,Length(A1)))
+
+3. [创建新工具方法](https://help.geogebra.org/topic/fractals)
+  - TOOL : TrianglePoints - given a list of three point and a number 1,2, or 3 it returns a sequence containing the three points making up one of the three new triangles.
+  - TOOL : TriangleLines - given a list of three points and a number 1,2, or 3 it returns a sequence containing all the segments for one of the the three new triangles.
+```
+L = {(0,0),(8,0),(4,6)} 
+w = 1                          
+TPoints = {Element[L, w], Midpoint[Element[L, w], Element[L, Mod[w, 3] + 1]], Midpoint[Element[L, w], Element[L, Mod[w + 1, 3] + 1]]} 
+>Create TrianglePoints tool here 
+TLines = Sequence[Segment[Element[TrianglePoints[L, w], i], Element[TrianglePoints[L, w], Mod[i, 3] + 1]], i, 1, 3] 
+>Create TriangleLines tool here 
+```
+TPoint is the output of TrianglePoints and L and w are input
+
+TLines is the output of TriangleLines and L and w are input
+
+Initially:
+
+TP1 = { {Points of Triangle 1} }
+
+After first pass
+
+TP2 = { {Points of New TriA}, {Points of New TriB}, {Points of New TriC} }
+
+
+With numbers
+
+TP1 = { {(0,0), (8,0), (4,6)} }
+
+Becomes
+
+TP2 = { {(0,0),(4,0),(2,3)} , {(8,0),(6,3),(4,0)} , {(4,6),(2,3),(6,3)} }
+
+
+Next iteration it will repeat the same process on each sequence in TP2.
+
+```
+TP1={ {(0,0), (8,0), (4,6)} } 
+
+
+TP2 = Sequence[TrianglePoints[Element[TP1, floor((i - 1) / 3) + 1], Mod[i - 1, 3] + 1], i, 1, Length[TP1]*3] 
+
+
+TS2=Sequence[TriangleLines[Element[TP1, floor((i - 1) / 3) + 1], Mod[i - 1, 3] + 1], i, 1, Length[TP1]*3] 
+```
 
 ## 光滑曲面实例
 
